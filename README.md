@@ -41,7 +41,7 @@ Reprezintă prospectele asociate medicamentelor, care conțin informații despre
 DETALII_RETETE
 Reprezintă detaliile unei rețete și stabilește legătura dintre rețete și medicamente, incluzând informații precum cantitatea și prețul.
 
- Relațiile dintre entități
+ ### Relațiile dintre entități
 
 CLIENTI – RETETE
 Un client poate avea mai multe rețete, însă o rețetă aparține unui singur client. Relația este de tip one-to-many (1:N).
