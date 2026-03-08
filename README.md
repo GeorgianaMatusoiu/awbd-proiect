@@ -81,3 +81,21 @@ Arhitectura aplicatiei include:
 - Exception handling global pentru tratarea erorilor
 
 Endpoint-urile au fost testate folosind Postman.
+
+## Configurare Multi-Environment
+Proiectul utilizează două profile Spring pentru gestionarea mediilor:
+
+dev
+- baza de date: PostgreSQL
+- configurare în application-dev.yml
+- utilizată pentru dezvoltare
+
+test
+- baza de date: H2 in-memory
+- configurare în application-test.yml
+- utilizată pentru testare rapidă
+
+Profilul activ se setează prin:
+spring.profiles.active=dev
+sau
+spring.profiles.active=test
