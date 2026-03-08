@@ -69,3 +69,15 @@ Un prospect poate fi asociat mai multor medicamente, însă fiecare medicament a
 
 RETETE – MEDICAMENTE
 Relația dintre rețete și medicamente este de tip many-to-many (M:N) și este implementată prin entitatea DETALII_RETETE, care conține informații suplimentare despre medicamentele dintr-o rețetă.
+
+## Operatii CRUD
+
+Pentru toate entitatile principale au fost implementate operatii CRUD folosind Spring Data JPA.
+
+Arhitectura aplicatiei include:
+- Controller layer pentru expunerea API-urilor REST
+- Service layer pentru logica de business
+- Repository layer folosind JpaRepository
+- Exception handling global pentru tratarea erorilor
+
+Endpoint-urile au fost testate folosind Postman.
