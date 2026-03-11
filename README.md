@@ -100,7 +100,7 @@ spring.profiles.active=dev
 sau
 spring.profiles.active=test
 
-### Testing
+## Testing
 
 Proiectul include unit tests și integration tests pentru verificarea funcționalităților aplicației.
 
