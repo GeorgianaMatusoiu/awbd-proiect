@@ -114,9 +114,9 @@ Integration Tests
 
 Au fost implementate 4 scenarii end-to-end folosind @SpringBootTest:
 
-Client → Card Fidelitate
-Client → Profil Client
-Client + Farmacist → Rețetă
+Client → Card Fidelitate;
+Client → Profil Client;
+Client + Farmacist → Rețetă;
 Categorie + Prospect + Furnizor → Medicament
 
 Test Database
