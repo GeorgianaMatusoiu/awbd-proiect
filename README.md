@@ -108,18 +108,15 @@ Unit Tests
 
 Testele unitare sunt implementate folosind JUnit 5 și Mockito și verifică logica din service layer prin simularea repository-urilor.
 
-Code coverage pentru service este 76%, depășind pragul minim de 70%.
+Code coverage pentru service este 76%.
 
 Integration Tests
 
 Au fost implementate 4 scenarii end-to-end folosind @SpringBootTest:
 
 Client → Card Fidelitate
-
 Client → Profil Client
-
 Client + Farmacist → Rețetă
-
 Categorie + Prospect + Furnizor → Medicament
 
 Test Database
