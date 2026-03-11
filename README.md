@@ -69,3 +69,56 @@ Un prospect poate fi asociat mai multor medicamente, însă fiecare medicament a
 
 RETETE – MEDICAMENTE
 Relația dintre rețete și medicamente este de tip many-to-many (M:N) și este implementată prin entitatea DETALII_RETETE, care conține informații suplimentare despre medicamentele dintr-o rețetă.
+
+## Operatii CRUD
+
+Pentru toate entitatile principale au fost implementate operatii CRUD folosind Spring Data JPA.
+
+Arhitectura aplicatiei include:
+- Controller layer pentru expunerea API-urilor REST
+- Service layer pentru logica de business
+- Repository layer folosind JpaRepository
+- Exception handling global pentru tratarea erorilor
+
+Endpoint-urile au fost testate folosind Postman.
+
+## Configurare Multi-Environment
+Proiectul utilizează două profile Spring pentru gestionarea mediilor:
+
+dev
+- baza de date: PostgreSQL
+- configurare în application-dev.yml
+- utilizată pentru dezvoltare
+
+test
+- baza de date: H2 in-memory
+- configurare în application-test.yml
+- utilizată pentru testare rapidă
+
+Profilul activ se setează prin:
+spring.profiles.active=dev
+sau
+spring.profiles.active=test
+
+## Testing
+
+Proiectul include unit tests și integration tests pentru verificarea funcționalităților aplicației.
+
+Unit Tests
+
+Testele unitare sunt implementate folosind JUnit 5 și Mockito și verifică logica din service layer prin simularea repository-urilor.
+
+Code coverage pentru service este 76%.
+
+Integration Tests
+
+Au fost implementate 4 scenarii end-to-end folosind @SpringBootTest:
+
+Client → Card Fidelitate;
+Client → Profil Client;
+Client + Farmacist → Rețetă;
+Categorie + Prospect + Furnizor → Medicament
+
+Test Database
+
+Integration tests folosesc profilul test, configurat cu baza de date H2 in-memory în application-test.yml, pentru rularea rapidă și izolată a testelor.
