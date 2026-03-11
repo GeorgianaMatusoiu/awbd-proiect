@@ -99,3 +99,29 @@ Profilul activ se setează prin:
 spring.profiles.active=dev
 sau
 spring.profiles.active=test
+
+### Testing
+
+Proiectul include unit tests și integration tests pentru verificarea funcționalităților aplicației.
+
+Unit Tests
+
+Testele unitare sunt implementate folosind JUnit 5 și Mockito și verifică logica din service layer prin simularea repository-urilor.
+
+Code coverage pentru service este 76%, depășind pragul minim de 70%.
+
+Integration Tests
+
+Au fost implementate 4 scenarii end-to-end folosind @SpringBootTest:
+
+Client → Card Fidelitate
+
+Client → Profil Client
+
+Client + Farmacist → Rețetă
+
+Categorie + Prospect + Furnizor → Medicament
+
+Test Database
+
+Integration tests folosesc profilul test, configurat cu baza de date H2 in-memory în application-test.yml, pentru rularea rapidă și izolată a testelor.
