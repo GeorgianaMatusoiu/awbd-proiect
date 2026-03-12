@@ -1,7 +1,11 @@
 import api from "../api/axiosConfig";
 
-export const getClients = () => api.get("/clients");
-export const getClient = (id) => api.get(`/clients/${id}`);
-export const createClient = (data) => api.post("/clients", data);
-export const updateClient = (id, data) => api.put(`/clients/${id}`, data);
-export const deleteClient = (id) => api.delete(`/clients/${id}`);
+export const getClients = () => api.get("/api/clienti");
+
+export const getClient = (id) => api.get(`/api/clienti/${id}`);
+
+export const createClient = (data) => api.post("/api/clienti", data);
+
+export const updateClient = (id, data) => api.put(`/api/clienti/${id}`, data);
+
+export const deleteClient = (id) => api.delete(`/api/clienti/${id}`);
