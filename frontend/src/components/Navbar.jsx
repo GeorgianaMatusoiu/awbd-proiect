@@ -37,6 +37,23 @@ function Navbar() {
           <Link to="/retete" className="navbar__link">
             Rețete
           </Link>
+
+          <Link to="/carduri" className="navbar__link">
+            Carduri
+          </Link>
+
+          <Link to="/profiluri" className="navbar__link">
+            Profiluri
+          </Link>
+
+          <Link to="/retete" className="navbar__link">
+            Rețete
+          </Link>
+
+          <Link to="/detalii-retete" className="navbar__link">
+            Detalii rețete
+          </Link>
+
         </div>
       </div>
     </nav>

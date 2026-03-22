@@ -13,6 +13,17 @@ import MedicamentList from "../pages/medicamente/MedicamentList";
 import MedicamentForm from "../pages/medicamente/MedicamentForm";
 import ProspectList from "../pages/prospecte/ProspectList";
 import ProspectForm from "../pages/prospecte/ProspectForm";
+import CardFidelitateList from "../pages/carduri/CardFidelitateList";
+import CardFidelitateForm from "../pages/carduri/CardFidelitateForm";
+import ProfilClientList from "../pages/profiluri/ProfilClientList";
+import ProfilClientForm from "../pages/profiluri/ProfilClientForm";
+import RetetaList from "../pages/retete/RetetaList";
+import RetetaForm from "../pages/retete/RetetaForm";
+import DetaliiRetetaList from "../pages/detalii-retete/DetaliiRetetaList";
+import DetaliiRetetaForm from "../pages/detalii-retete/DetaliiRetetaForm";
+import NotFoundPage from "../pages/errors/NotFoundPage";
+import ServerErrorPage from "../pages/errors/ServerErrorPage";
+
 function AppRouter() {
   return (
     <BrowserRouter>
@@ -43,6 +54,28 @@ function AppRouter() {
        <Route path="/prospecte" element={<ProspectList />} />
        <Route path="/prospecte/new" element={<ProspectForm />} />
        <Route path="/prospecte/edit/:id" element={<ProspectForm />} />
+
+       <Route path="/carduri" element={<CardFidelitateList />} />
+       <Route path="/carduri/new" element={<CardFidelitateForm />} />
+       <Route path="/carduri/edit/:id" element={<CardFidelitateForm />} />
+
+       <Route path="/profiluri" element={<ProfilClientList />} />
+       <Route path="/profiluri/new" element={<ProfilClientForm />} />
+       <Route path="/profiluri/edit/:id" element={<ProfilClientForm />} />
+
+       <Route path="/retete" element={<RetetaList />} />
+       <Route path="/retete/new" element={<RetetaForm />} />
+       <Route path="/retete/edit/:id" element={<RetetaForm />} />
+
+       <Route path="/detalii-retete" element={<DetaliiRetetaList />} />
+       <Route path="/detalii-retete/new" element={<DetaliiRetetaForm />} />
+       <Route
+         path="/detalii-retete/edit/:retetaId/:medicamentId"
+         element={<DetaliiRetetaForm />}
+       />
+
+       <Route path="/error" element={<ServerErrorPage />} />
+       <Route path="*" element={<NotFoundPage />} />
 
       </Routes>
 
