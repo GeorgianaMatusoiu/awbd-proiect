@@ -1,6 +1,6 @@
 import api from "../api/axiosConfig";
 
-export const getProspecte = () => api.get("/api/prospecte");
+export const getProspecte = (params) => api.get("/api/prospecte", { params });
 
 export const getProspect = (id) => api.get(`/api/prospecte/${id}`);
 

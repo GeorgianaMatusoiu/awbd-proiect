@@ -1,4 +1,4 @@
-.medicament-page {
+.profil-page {
   min-height: 100vh;
   width: 100%;
   background: linear-gradient(180deg, #f8fbff 0%, #eef3f9 100%);
@@ -7,12 +7,12 @@
   justify-content: center;
 }
 
-.medicament-page__content {
+.profil-page__content {
   width: 100%;
-  max-width: 1250px;
+  max-width: 1200px;
 }
 
-.medicament-page__topbar {
+.profil-page__topbar {
   width: 100%;
   margin-bottom: 24px;
   display: flex;
@@ -21,23 +21,23 @@
   gap: 16px;
 }
 
-.medicament-page__subtitle {
+.profil-page__subtitle {
   margin: 0 0 8px 0;
   font-size: 14px;
   color: #64748b;
   letter-spacing: 0.3px;
 }
 
-.medicament-page__title {
+.profil-page__title {
   margin: 0;
   font-size: 42px;
   font-weight: 700;
   color: #0f172a;
 }
 
-.medicament-page__add-btn,
-.medicament-page__back-btn,
-.medicament-page__submit-btn {
+.profil-page__add-btn,
+.profil-page__back-btn,
+.profil-page__submit-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -53,14 +53,14 @@
   cursor: pointer;
 }
 
-.medicament-page__add-btn:hover,
-.medicament-page__back-btn:hover,
-.medicament-page__submit-btn:hover {
+.profil-page__add-btn:hover,
+.profil-page__back-btn:hover,
+.profil-page__submit-btn:hover {
   background: #1d4ed8;
   transform: translateY(-1px);
 }
 
-.medicament-page__alert {
+.profil-page__alert {
   width: 100%;
   margin-bottom: 20px;
   padding: 14px 16px;
@@ -68,13 +68,13 @@
   font-size: 14px;
 }
 
-.medicament-page__alert--error {
+.profil-page__alert--error {
   background: #fee2e2;
   color: #b91c1c;
   border: 1px solid #fecaca;
 }
 
-.medicament-page__card {
+.profil-page__card {
   width: 100%;
   background: #ffffff;
   border-radius: 20px;
@@ -82,25 +82,25 @@
   overflow: hidden;
 }
 
-.medicament-page__form-card {
+.profil-page__form-card {
   padding: 24px;
 }
 
-.medicament-page__table-wrapper {
+.profil-page__table-wrapper {
   width: 100%;
   overflow-x: auto;
 }
 
-.medicament-page__table {
+.profil-page__table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.medicament-page__table thead {
+.profil-page__table thead {
   background: #f8fafc;
 }
 
-.medicament-page__table th {
+.profil-page__table th {
   text-align: left;
   padding: 18px 20px;
   font-size: 14px;
@@ -109,24 +109,24 @@
   border-bottom: 1px solid #e2e8f0;
 }
 
-.medicament-page__table td {
+.profil-page__table td {
   padding: 18px 20px;
   border-bottom: 1px solid #eef2f7;
   font-size: 15px;
   color: #1e293b;
 }
 
-.medicament-page__table tbody tr:hover {
+.profil-page__table tbody tr:hover {
   background: #f8fbff;
 }
 
-.medicament-page__actions {
+.profil-page__actions {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.medicament-page__action-btn {
+.profil-page__action-btn {
   border: none;
   text-decoration: none;
   padding: 9px 14px;
@@ -137,25 +137,25 @@
   transition: 0.2s ease;
 }
 
-.medicament-page__action-btn--edit {
+.profil-page__action-btn--edit {
   background: #dcfce7;
   color: #166534;
 }
 
-.medicament-page__action-btn--edit:hover {
+.profil-page__action-btn--edit:hover {
   background: #bbf7d0;
 }
 
-.medicament-page__action-btn--delete {
+.profil-page__action-btn--delete {
   background: #fee2e2;
   color: #b91c1c;
 }
 
-.medicament-page__action-btn--delete:hover {
+.profil-page__action-btn--delete:hover {
   background: #fecaca;
 }
 
-.medicament-page__state {
+.profil-page__state {
   min-height: 220px;
   padding: 40px 24px;
   display: flex;
@@ -166,29 +166,33 @@
   font-size: 18px;
 }
 
-.medicament-page__form {
+.profil-page__form {
   width: 100%;
 }
 
-.medicament-page__form-grid {
+.profil-page__form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
 }
 
-.medicament-page__form-group {
+.profil-page__form-group {
   display: flex;
   flex-direction: column;
 }
 
-.medicament-page__form-group label {
+.profil-page__form-group--full {
+  grid-column: 1 / -1;
+}
+
+.profil-page__form-group label {
   margin-bottom: 8px;
   font-weight: 600;
   color: #334155;
 }
 
-.medicament-page__form-group input,
-.medicament-page__form-group select {
+.profil-page__form-group input,
+.profil-page__form-group select {
   width: 100%;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
@@ -199,42 +203,46 @@
   background: white;
 }
 
-.medicament-page__form-group input:focus,
-.medicament-page__form-group select:focus {
+.profil-page__form-group input:focus,
+.profil-page__form-group select:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
-.medicament-page__field-error {
+.profil-page__field-error {
   margin-top: 6px;
   color: #dc2626;
   font-size: 13px;
 }
 
-.medicament-page__form-actions {
+.profil-page__form-actions {
   margin-top: 24px;
 }
 
 @media (max-width: 768px) {
-  .medicament-page {
+  .profil-page {
     padding: 24px 16px;
   }
 
-  .medicament-page__topbar {
+  .profil-page__topbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .medicament-page__title {
+  .profil-page__title {
     font-size: 32px;
   }
 
-  .medicament-page__table th,
-  .medicament-page__table td {
+  .profil-page__table th,
+  .profil-page__table td {
     padding: 14px 12px;
   }
 
-  .medicament-page__form-grid {
+  .profil-page__form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .profil-page__form-group--full {
+    grid-column: auto;
   }
 }

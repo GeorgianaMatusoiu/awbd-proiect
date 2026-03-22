@@ -4,10 +4,10 @@ import com.awbd.demo.dto.RetetaRequest;
 import com.awbd.demo.entity.Reteta;
 import com.awbd.demo.service.RetetaService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/retete")
@@ -26,8 +26,8 @@ public class RetetaController {
     }
 
     @GetMapping
-    public List<Reteta> getAll() {
-        return service.getAll();
+    public Page<Reteta> getAll(Pageable pageable) {
+        return service.getAll(pageable);
     }
 
     @GetMapping("/{id}")

@@ -10,12 +10,16 @@ import com.awbd.demo.repository.CategorieMedicamentRepository;
 import com.awbd.demo.repository.FurnizorRepository;
 import com.awbd.demo.repository.MedicamentRepository;
 import com.awbd.demo.repository.ProspectRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class MedicamentService {
+
+    private static final Logger log = LoggerFactory.getLogger(MedicamentService.class);
 
     private final MedicamentRepository medicamentRepo;
     private final FurnizorRepository furnizorRepo;
@@ -33,14 +37,28 @@ public class MedicamentService {
     }
 
     public Medicament create(MedicamentRequest req) {
+        log.info("Se incearca crearea unui medicament nou");
+        log.debug("Date primite pentru creare medicament: denumire={}, dataExpirare={}, pret={}, furnizorId={}, prospectId={}, categorieId={}",
+                req.getDenumire(), req.getDataExpirare(), req.getPret(),
+                req.getFurnizorId(), req.getProspectId(), req.getCategorieId());
+
         Furnizor furnizor = furnizorRepo.findById(req.getFurnizorId())
-                .orElseThrow(() -> new ResourceNotFoundException("Furnizorul cu id " + req.getFurnizorId() + " nu exista."));
+                .orElseThrow(() -> {
+                    log.error("Crearea medicamentului a esuat: furnizorul cu id={} nu a fost gasit", req.getFurnizorId());
+                    return new ResourceNotFoundException("Furnizorul cu id " + req.getFurnizorId() + " nu exista.");
+                });
 
         Prospect prospect = prospectRepo.findById(req.getProspectId())
-                .orElseThrow(() -> new ResourceNotFoundException("Prospectul cu id " + req.getProspectId() + " nu exista."));
+                .orElseThrow(() -> {
+                    log.error("Crearea medicamentului a esuat: prospectul cu id={} nu a fost gasit", req.getProspectId());
+                    return new ResourceNotFoundException("Prospectul cu id " + req.getProspectId() + " nu exista.");
+                });
 
         CategorieMedicament categorie = categorieRepo.findById(req.getCategorieId())
-                .orElseThrow(() -> new ResourceNotFoundException("Categoria cu id " + req.getCategorieId() + " nu exista."));
+                .orElseThrow(() -> {
+                    log.error("Crearea medicamentului a esuat: categoria cu id={} nu a fost gasita", req.getCategorieId());
+                    return new ResourceNotFoundException("Categoria cu id " + req.getCategorieId() + " nu exista.");
+                });
 
         Medicament medicament = new Medicament();
         medicament.setDenumire(req.getDenumire());
@@ -50,19 +68,40 @@ public class MedicamentService {
         medicament.setProspect(prospect);
         medicament.setCategorie(categorie);
 
-        return medicamentRepo.save(medicament);
+        Medicament saved = medicamentRepo.save(medicament);
+        log.info("Medicament creat cu succes, id={}", saved.getId());
+        return saved;
     }
 
-    public List<Medicament> getAll() {
-        return medicamentRepo.findAll();
+    public Page<Medicament> getAll(Pageable pageable) {
+        log.info("Se solicita lista paginata a medicamentelor");
+        log.debug("Page request: page={}, size={}, sort={}",
+                pageable.getPageNumber(), pageable.getPageSize(), pageable.getSort());
+
+        Page<Medicament> medicamentePage = medicamentRepo.findAll(pageable);
+
+        log.debug("Au fost gasite {} medicamente pe pagina curenta din total {}",
+                medicamentePage.getNumberOfElements(), medicamentePage.getTotalElements());
+
+        return medicamentePage;
     }
 
     public Medicament getById(Long id) {
+        log.info("Se cauta medicamentul cu id={}", id);
+
         return medicamentRepo.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Medicamentul cu id " + id + " nu exista."));
+                .orElseThrow(() -> {
+                    log.error("Medicamentul cu id={} nu a fost gasit", id);
+                    return new ResourceNotFoundException("Medicamentul cu id " + id + " nu exista.");
+                });
     }
 
     public Medicament update(Long id, MedicamentRequest req) {
+        log.info("Se incearca actualizarea medicamentului cu id={}", id);
+        log.debug("Date primite pentru update medicament: denumire={}, dataExpirare={}, pret={}, furnizorId={}, prospectId={}, categorieId={}",
+                req.getDenumire(), req.getDataExpirare(), req.getPret(),
+                req.getFurnizorId(), req.getProspectId(), req.getCategorieId());
+
         Medicament existing = getById(id);
 
         if (req.getDenumire() != null) {
@@ -79,27 +118,42 @@ public class MedicamentService {
 
         if (req.getFurnizorId() != null) {
             Furnizor furnizor = furnizorRepo.findById(req.getFurnizorId())
-                    .orElseThrow(() -> new ResourceNotFoundException("Furnizorul cu id " + req.getFurnizorId() + " nu exista."));
+                    .orElseThrow(() -> {
+                        log.error("Actualizarea medicamentului a esuat: furnizorul cu id={} nu a fost gasit", req.getFurnizorId());
+                        return new ResourceNotFoundException("Furnizorul cu id " + req.getFurnizorId() + " nu exista.");
+                    });
             existing.setFurnizor(furnizor);
         }
 
         if (req.getProspectId() != null) {
             Prospect prospect = prospectRepo.findById(req.getProspectId())
-                    .orElseThrow(() -> new ResourceNotFoundException("Prospectul cu id " + req.getProspectId() + " nu exista."));
+                    .orElseThrow(() -> {
+                        log.error("Actualizarea medicamentului a esuat: prospectul cu id={} nu a fost gasit", req.getProspectId());
+                        return new ResourceNotFoundException("Prospectul cu id " + req.getProspectId() + " nu exista.");
+                    });
             existing.setProspect(prospect);
         }
 
         if (req.getCategorieId() != null) {
             CategorieMedicament categorie = categorieRepo.findById(req.getCategorieId())
-                    .orElseThrow(() -> new ResourceNotFoundException("Categoria cu id " + req.getCategorieId() + " nu exista."));
+                    .orElseThrow(() -> {
+                        log.error("Actualizarea medicamentului a esuat: categoria cu id={} nu a fost gasita", req.getCategorieId());
+                        return new ResourceNotFoundException("Categoria cu id " + req.getCategorieId() + " nu exista.");
+                    });
             existing.setCategorie(categorie);
         }
 
-        return medicamentRepo.save(existing);
+        Medicament saved = medicamentRepo.save(existing);
+        log.info("Medicamentul cu id={} a fost actualizat cu succes", saved.getId());
+        return saved;
     }
 
     public void delete(Long id) {
+        log.info("Se incearca stergerea medicamentului cu id={}", id);
+
         Medicament existing = getById(id);
         medicamentRepo.delete(existing);
+
+        log.info("Medicamentul cu id={} a fost sters cu succes", id);
     }
 }

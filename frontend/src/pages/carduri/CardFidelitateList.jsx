@@ -1,56 +1,59 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { deleteClient, getClients } from "../../services/clientService";
-import "./ClientList.css";
+import {
+  deleteCard,
+  getCarduri,
+} from "../../services/cardFidelitateService";
+import "./CardFidelitate.css";
 
-function ClientList() {
-  const [clients, setClients] = useState([]);
+function CardFidelitateList() {
+  const [carduri, setCarduri] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const [sortField, setSortField] = useState("nume");
+  const [sortField, setSortField] = useState("nivel");
   const [sortDirection, setSortDirection] = useState("asc");
 
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(5);
   const [totalPages, setTotalPages] = useState(0);
 
-  const loadClients = async (currentPage = page, currentSize = size) => {
+  const loadCarduri = async (currentPage = page, currentSize = size) => {
     try {
       setLoading(true);
       setErrorMessage("");
 
-      const response = await getClients({
+      const response = await getCarduri({
         page: currentPage,
         size: currentSize,
         sort: `${sortField},${sortDirection}`,
       });
 
-      setClients(response.data.content);
+      setCarduri(response.data.content);
       setTotalPages(response.data.totalPages);
       setPage(response.data.number);
     } catch (error) {
-      console.error("Eroare la încărcarea clienților:", error);
-      setErrorMessage("Nu s-au putut încărca clienții.");
+      console.error("Eroare la încărcarea cardurilor:", error);
+      setErrorMessage("Nu s-au putut încărca cardurile.");
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    loadClients(page, size);
+    loadCarduri(page, size);
   }, [page, size, sortField, sortDirection]);
 
   const handleDelete = async (id) => {
-    const confirmed = window.confirm("Sigur vrei să ștergi acest client?");
+    const confirmed = window.confirm("Sigur vrei să ștergi acest card?");
     if (!confirmed) return;
 
     try {
-      await deleteClient(id);
-      await loadClients(page, size);
+      await deleteCard(id);
+      await loadCarduri(page, size);
     } catch (error) {
       console.error("Eroare la ștergere:", error);
-      setErrorMessage("Clientul nu a putut fi șters.");
+      setErrorMessage("Cardul nu a putut fi șters.");
     }
   };
 
@@ -82,30 +85,30 @@ function ClientList() {
   };
 
   return (
-    <div className="client-page">
-      <div className="client-page__content">
-        <div className="client-page__topbar">
+    <div className="card-page">
+      <div className="card-page__content">
+        <div className="card-page__topbar">
           <div>
-            <p className="client-page__subtitle">Administrare clienți</p>
-            <h1 className="client-page__title">Clienți</h1>
+            <p className="card-page__subtitle">Administrare carduri</p>
+            <h1 className="card-page__title">Carduri fidelitate</h1>
           </div>
 
-          <Link to="/clients/new" className="client-page__add-btn">
-            + Adaugă client
+          <Link to="/carduri/new" className="card-page__add-btn">
+            + Adaugă card
           </Link>
         </div>
 
         {errorMessage && (
-          <div className="client-page__alert client-page__alert--error">
+          <div className="card-page__alert card-page__alert--error">
             {errorMessage}
           </div>
         )}
 
-        <div className="client-page__card">
+        <div className="card-page__card">
           {loading ? (
-            <div className="client-page__state">Se încarcă...</div>
-          ) : clients.length === 0 ? (
-            <div className="client-page__state">Nu există clienți.</div>
+            <div className="card-page__state">Se încarcă...</div>
+          ) : carduri.length === 0 ? (
+            <div className="card-page__state">Nu există carduri.</div>
           ) : (
             <>
               <div
@@ -129,8 +132,8 @@ function ClientList() {
                 <div>
                   <label style={{ marginRight: "8px" }}>Sortează după:</label>
                   <select value={sortField} onChange={handleSortFieldChange}>
-                    <option value="nume">Nume</option>
-                    <option value="varsta">Vârstă</option>
+                    <option value="nivel">Nivel</option>
+                    <option value="puncte">Puncte</option>
                   </select>
                 </div>
 
@@ -143,40 +146,40 @@ function ClientList() {
                 </div>
               </div>
 
-              <div className="client-page__table-wrapper">
-                <table className="client-page__table">
+              <div className="card-page__table-wrapper">
+                <table className="card-page__table">
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>CNP</th>
-                      <th>Nume</th>
-                      <th>Prenume</th>
-                      <th>Vârstă</th>
-                      <th>Telefon</th>
+                      <th>Nivel</th>
+                      <th>Puncte</th>
+                      <th>Client</th>
                       <th>Acțiuni</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {clients.map((client) => (
-                      <tr key={client.id}>
-                        <td>{client.id}</td>
-                        <td>{client.cnp}</td>
-                        <td>{client.nume}</td>
-                        <td>{client.prenume}</td>
-                        <td>{client.varsta}</td>
-                        <td>{client.telefon}</td>
+                    {carduri.map((card) => (
+                      <tr key={card.id}>
+                        <td>{card.id}</td>
+                        <td>{card.nivel}</td>
+                        <td>{card.puncte}</td>
                         <td>
-                          <div className="client-page__actions">
+                          {card.client
+                            ? `${card.client.nume} ${card.client.prenume}`
+                            : "-"}
+                        </td>
+                        <td>
+                          <div className="card-page__actions">
                             <Link
-                              to={`/clients/edit/${client.id}`}
-                              className="client-page__action-btn client-page__action-btn--edit"
+                              to={`/carduri/edit/${card.id}`}
+                              className="card-page__action-btn card-page__action-btn--edit"
                             >
                               Edit
                             </Link>
 
                             <button
-                              onClick={() => handleDelete(client.id)}
-                              className="client-page__action-btn client-page__action-btn--delete"
+                              onClick={() => handleDelete(card.id)}
+                              className="card-page__action-btn card-page__action-btn--delete"
                             >
                               Delete
                             </button>
@@ -219,4 +222,4 @@ function ClientList() {
   );
 }
 
-export default ClientList;
+export default CardFidelitateList;

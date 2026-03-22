@@ -1,6 +1,7 @@
 import api from "../api/axiosConfig";
 
-export const getFarmacisti = () => api.get("/api/farmacisti");
+export const getFarmacisti = (params) =>
+  api.get("/api/farmacisti", { params });
 
 export const getFarmacist = (id) => api.get(`/api/farmacisti/${id}`);
 

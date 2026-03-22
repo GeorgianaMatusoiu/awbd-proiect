@@ -1,69 +1,68 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { deleteClient, getClients } from "../../services/clientService";
-import "./ClientList.css";
+import {
+  deleteProfil,
+  getProfiluri,
+} from "../../services/profilClientService";
+import "./ProfilClient.css";
 
-function ClientList() {
-  const [clients, setClients] = useState([]);
+function ProfilClientList() {
+  const [profiluri, setProfiluri] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const [sortField, setSortField] = useState("nume");
+  const [sortField, setSortField] = useState("vaccinari");
   const [sortDirection, setSortDirection] = useState("asc");
 
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(5);
   const [totalPages, setTotalPages] = useState(0);
 
-  const loadClients = async (currentPage = page, currentSize = size) => {
+  const loadProfiluri = async (currentPage = page, currentSize = size) => {
     try {
       setLoading(true);
       setErrorMessage("");
 
-      const response = await getClients({
+      const response = await getProfiluri({
         page: currentPage,
         size: currentSize,
         sort: `${sortField},${sortDirection}`,
       });
 
-      setClients(response.data.content);
+      setProfiluri(response.data.content);
       setTotalPages(response.data.totalPages);
       setPage(response.data.number);
     } catch (error) {
-      console.error("Eroare la încărcarea clienților:", error);
-      setErrorMessage("Nu s-au putut încărca clienții.");
+      console.error("Eroare la încărcarea profilurilor:", error);
+      setErrorMessage("Nu s-au putut încărca profilurile.");
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    loadClients(page, size);
+    loadProfiluri(page, size);
   }, [page, size, sortField, sortDirection]);
 
   const handleDelete = async (id) => {
-    const confirmed = window.confirm("Sigur vrei să ștergi acest client?");
+    const confirmed = window.confirm("Sigur vrei să ștergi acest profil?");
     if (!confirmed) return;
 
     try {
-      await deleteClient(id);
-      await loadClients(page, size);
+      await deleteProfil(id);
+      await loadProfiluri(page, size);
     } catch (error) {
       console.error("Eroare la ștergere:", error);
-      setErrorMessage("Clientul nu a putut fi șters.");
+      setErrorMessage("Profilul nu a putut fi șters.");
     }
   };
 
   const handlePrevPage = () => {
-    if (page > 0) {
-      setPage((prev) => prev - 1);
-    }
+    if (page > 0) setPage((prev) => prev - 1);
   };
 
   const handleNextPage = () => {
-    if (page < totalPages - 1) {
-      setPage((prev) => prev + 1);
-    }
+    if (page < totalPages - 1) setPage((prev) => prev + 1);
   };
 
   const handleSizeChange = (event) => {
@@ -82,30 +81,30 @@ function ClientList() {
   };
 
   return (
-    <div className="client-page">
-      <div className="client-page__content">
-        <div className="client-page__topbar">
+    <div className="profil-page">
+      <div className="profil-page__content">
+        <div className="profil-page__topbar">
           <div>
-            <p className="client-page__subtitle">Administrare clienți</p>
-            <h1 className="client-page__title">Clienți</h1>
+            <p className="profil-page__subtitle">Administrare profiluri</p>
+            <h1 className="profil-page__title">Profiluri client</h1>
           </div>
 
-          <Link to="/clients/new" className="client-page__add-btn">
-            + Adaugă client
+          <Link to="/profiluri/new" className="profil-page__add-btn">
+            + Adaugă profil
           </Link>
         </div>
 
         {errorMessage && (
-          <div className="client-page__alert client-page__alert--error">
+          <div className="profil-page__alert profil-page__alert--error">
             {errorMessage}
           </div>
         )}
 
-        <div className="client-page__card">
+        <div className="profil-page__card">
           {loading ? (
-            <div className="client-page__state">Se încarcă...</div>
-          ) : clients.length === 0 ? (
-            <div className="client-page__state">Nu există clienți.</div>
+            <div className="profil-page__state">Se încarcă...</div>
+          ) : profiluri.length === 0 ? (
+            <div className="profil-page__state">Nu există profiluri.</div>
           ) : (
             <>
               <div
@@ -129,8 +128,8 @@ function ClientList() {
                 <div>
                   <label style={{ marginRight: "8px" }}>Sortează după:</label>
                   <select value={sortField} onChange={handleSortFieldChange}>
-                    <option value="nume">Nume</option>
-                    <option value="varsta">Vârstă</option>
+                    <option value="vaccinari">Vaccinări</option>
+                    <option value="alergie">Alergie</option>
                   </select>
                 </div>
 
@@ -143,40 +142,40 @@ function ClientList() {
                 </div>
               </div>
 
-              <div className="client-page__table-wrapper">
-                <table className="client-page__table">
+              <div className="profil-page__table-wrapper">
+                <table className="profil-page__table">
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>CNP</th>
-                      <th>Nume</th>
-                      <th>Prenume</th>
-                      <th>Vârstă</th>
-                      <th>Telefon</th>
+                      <th>Vaccinări</th>
+                      <th>Alergie</th>
+                      <th>Client</th>
                       <th>Acțiuni</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {clients.map((client) => (
-                      <tr key={client.id}>
-                        <td>{client.id}</td>
-                        <td>{client.cnp}</td>
-                        <td>{client.nume}</td>
-                        <td>{client.prenume}</td>
-                        <td>{client.varsta}</td>
-                        <td>{client.telefon}</td>
+                    {profiluri.map((profil) => (
+                      <tr key={profil.id}>
+                        <td>{profil.id}</td>
+                        <td>{profil.vaccinari}</td>
+                        <td>{profil.alergie}</td>
                         <td>
-                          <div className="client-page__actions">
+                          {profil.client
+                            ? `${profil.client.nume} ${profil.client.prenume}`
+                            : "-"}
+                        </td>
+                        <td>
+                          <div className="profil-page__actions">
                             <Link
-                              to={`/clients/edit/${client.id}`}
-                              className="client-page__action-btn client-page__action-btn--edit"
+                              to={`/profiluri/edit/${profil.id}`}
+                              className="profil-page__action-btn profil-page__action-btn--edit"
                             >
                               Edit
                             </Link>
 
                             <button
-                              onClick={() => handleDelete(client.id)}
-                              className="client-page__action-btn client-page__action-btn--delete"
+                              onClick={() => handleDelete(profil.id)}
+                              className="profil-page__action-btn profil-page__action-btn--delete"
                             >
                               Delete
                             </button>
@@ -219,4 +218,4 @@ function ClientList() {
   );
 }
 
-export default ClientList;
+export default ProfilClientList;

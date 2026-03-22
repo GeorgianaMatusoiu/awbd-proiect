@@ -4,10 +4,10 @@ import com.awbd.demo.dto.DetaliiRetetaRequest;
 import com.awbd.demo.entity.DetaliiReteta;
 import com.awbd.demo.service.DetaliiRetetaService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/detalii-retete")
@@ -26,8 +26,8 @@ public class DetaliiRetetaController {
     }
 
     @GetMapping
-    public List<DetaliiReteta> getAll() {
-        return service.getAll();
+    public Page<DetaliiReteta> getAll(Pageable pageable) {
+        return service.getAll(pageable);
     }
 
     @GetMapping("/{retetaId}/{medicamentId}")

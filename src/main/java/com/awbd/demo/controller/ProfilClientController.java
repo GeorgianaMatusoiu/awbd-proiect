@@ -4,10 +4,10 @@ import com.awbd.demo.dto.ProfilClientRequest;
 import com.awbd.demo.entity.ProfilClient;
 import com.awbd.demo.service.ProfilClientService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/profiluri")
@@ -26,8 +26,8 @@ public class ProfilClientController {
     }
 
     @GetMapping
-    public List<ProfilClient> getAll() {
-        return service.getAll();
+    public Page<ProfilClient> getAll(Pageable pageable) {
+        return service.getAll(pageable);
     }
 
     @GetMapping("/{id}")

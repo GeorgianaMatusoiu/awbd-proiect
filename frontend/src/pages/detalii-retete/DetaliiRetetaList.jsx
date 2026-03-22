@@ -1,56 +1,61 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { deleteClient, getClients } from "../../services/clientService";
-import "./ClientList.css";
+import {
+  deleteDetaliuReteta,
+  getDetaliiRetete,
+} from "../../services/detaliiRetetaService";
+import "./DetaliiReteta.css";
 
-function ClientList() {
-  const [clients, setClients] = useState([]);
+function DetaliiRetetaList() {
+  const [detalii, setDetalii] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const [sortField, setSortField] = useState("nume");
+  const [sortField, setSortField] = useState("pret");
   const [sortDirection, setSortDirection] = useState("asc");
 
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(5);
   const [totalPages, setTotalPages] = useState(0);
 
-  const loadClients = async (currentPage = page, currentSize = size) => {
+  const loadDetalii = async (currentPage = page, currentSize = size) => {
     try {
       setLoading(true);
       setErrorMessage("");
 
-      const response = await getClients({
+      const response = await getDetaliiRetete({
         page: currentPage,
         size: currentSize,
         sort: `${sortField},${sortDirection}`,
       });
 
-      setClients(response.data.content);
+      setDetalii(response.data.content);
       setTotalPages(response.data.totalPages);
       setPage(response.data.number);
     } catch (error) {
-      console.error("Eroare la încărcarea clienților:", error);
-      setErrorMessage("Nu s-au putut încărca clienții.");
+      console.error("Eroare la încărcarea detaliilor rețetelor:", error);
+      setErrorMessage("Nu s-au putut încărca detaliile rețetelor.");
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    loadClients(page, size);
+    loadDetalii(page, size);
   }, [page, size, sortField, sortDirection]);
 
-  const handleDelete = async (id) => {
-    const confirmed = window.confirm("Sigur vrei să ștergi acest client?");
+  const handleDelete = async (retetaId, medicamentId) => {
+    const confirmed = window.confirm(
+      "Sigur vrei să ștergi acest detaliu de rețetă?"
+    );
     if (!confirmed) return;
 
     try {
-      await deleteClient(id);
-      await loadClients(page, size);
+      await deleteDetaliuReteta(retetaId, medicamentId);
+      await loadDetalii(page, size);
     } catch (error) {
       console.error("Eroare la ștergere:", error);
-      setErrorMessage("Clientul nu a putut fi șters.");
+      setErrorMessage("Detaliul rețetei nu a putut fi șters.");
     }
   };
 
@@ -82,30 +87,32 @@ function ClientList() {
   };
 
   return (
-    <div className="client-page">
-      <div className="client-page__content">
-        <div className="client-page__topbar">
+    <div className="detalii-page">
+      <div className="detalii-page__content">
+        <div className="detalii-page__topbar">
           <div>
-            <p className="client-page__subtitle">Administrare clienți</p>
-            <h1 className="client-page__title">Clienți</h1>
+            <p className="detalii-page__subtitle">Administrare detalii rețete</p>
+            <h1 className="detalii-page__title">Detalii rețete</h1>
           </div>
 
-          <Link to="/clients/new" className="client-page__add-btn">
-            + Adaugă client
+          <Link to="/detalii-retete/new" className="detalii-page__add-btn">
+            + Adaugă detaliu
           </Link>
         </div>
 
         {errorMessage && (
-          <div className="client-page__alert client-page__alert--error">
+          <div className="detalii-page__alert detalii-page__alert--error">
             {errorMessage}
           </div>
         )}
 
-        <div className="client-page__card">
+        <div className="detalii-page__card">
           {loading ? (
-            <div className="client-page__state">Se încarcă...</div>
-          ) : clients.length === 0 ? (
-            <div className="client-page__state">Nu există clienți.</div>
+            <div className="detalii-page__state">Se încarcă...</div>
+          ) : detalii.length === 0 ? (
+            <div className="detalii-page__state">
+              Nu există detalii de rețete.
+            </div>
           ) : (
             <>
               <div
@@ -129,8 +136,8 @@ function ClientList() {
                 <div>
                   <label style={{ marginRight: "8px" }}>Sortează după:</label>
                   <select value={sortField} onChange={handleSortFieldChange}>
-                    <option value="nume">Nume</option>
-                    <option value="varsta">Vârstă</option>
+                    <option value="pret">Preț</option>
+                    <option value="cantitate">Cantitate</option>
                   </select>
                 </div>
 
@@ -143,40 +150,51 @@ function ClientList() {
                 </div>
               </div>
 
-              <div className="client-page__table-wrapper">
-                <table className="client-page__table">
+              <div className="detalii-page__table-wrapper">
+                <table className="detalii-page__table">
                   <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>CNP</th>
-                      <th>Nume</th>
-                      <th>Prenume</th>
-                      <th>Vârstă</th>
-                      <th>Telefon</th>
+                      <th>Rețetă</th>
+                      <th>Medicament</th>
+                      <th>Preț</th>
+                      <th>Cantitate</th>
                       <th>Acțiuni</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {clients.map((client) => (
-                      <tr key={client.id}>
-                        <td>{client.id}</td>
-                        <td>{client.cnp}</td>
-                        <td>{client.nume}</td>
-                        <td>{client.prenume}</td>
-                        <td>{client.varsta}</td>
-                        <td>{client.telefon}</td>
+                    {detalii.map((item) => (
+                      <tr
+                        key={`${item.reteta?.id ?? item.id?.retetaId}-${
+                          item.medicament?.id ?? item.id?.medicamentId
+                        }`}
+                      >
+                        <td>{item.reteta?.id ?? item.id?.retetaId ?? "-"}</td>
                         <td>
-                          <div className="client-page__actions">
+                          {item.medicament
+                            ? `${item.medicament.denumire} (#${item.medicament.id})`
+                            : item.id?.medicamentId ?? "-"}
+                        </td>
+                        <td>{item.pret}</td>
+                        <td>{item.cantitate}</td>
+                        <td>
+                          <div className="detalii-page__actions">
                             <Link
-                              to={`/clients/edit/${client.id}`}
-                              className="client-page__action-btn client-page__action-btn--edit"
+                              to={`/detalii-retete/edit/${
+                                item.reteta?.id ?? item.id?.retetaId
+                              }/${item.medicament?.id ?? item.id?.medicamentId}`}
+                              className="detalii-page__action-btn detalii-page__action-btn--edit"
                             >
                               Edit
                             </Link>
 
                             <button
-                              onClick={() => handleDelete(client.id)}
-                              className="client-page__action-btn client-page__action-btn--delete"
+                              onClick={() =>
+                                handleDelete(
+                                  item.reteta?.id ?? item.id?.retetaId,
+                                  item.medicament?.id ?? item.id?.medicamentId
+                                )
+                              }
+                              className="detalii-page__action-btn detalii-page__action-btn--delete"
                             >
                               Delete
                             </button>
@@ -219,4 +237,4 @@ function ClientList() {
   );
 }
 
-export default ClientList;
+export default DetaliiRetetaList;

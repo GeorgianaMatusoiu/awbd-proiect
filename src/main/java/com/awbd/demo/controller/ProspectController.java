@@ -3,10 +3,10 @@ package com.awbd.demo.controller;
 import com.awbd.demo.entity.Prospect;
 import com.awbd.demo.service.ProspectService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/prospecte")
@@ -25,8 +25,8 @@ public class ProspectController {
     }
 
     @GetMapping
-    public List<Prospect> getAll() {
-        return service.getAll();
+    public Page<Prospect> getAll(Pageable pageable) {
+        return service.getAll(pageable);
     }
 
     @GetMapping("/{id}")

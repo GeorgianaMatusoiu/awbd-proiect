@@ -1,0 +1,245 @@
+.detalii-page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef3f9 100%);
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.detalii-page__content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.detalii-page__topbar {
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.detalii-page__subtitle {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #64748b;
+  letter-spacing: 0.3px;
+}
+
+.detalii-page__title {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.detalii-page__add-btn,
+.detalii-page__back-btn,
+.detalii-page__submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.18);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.detalii-page__add-btn:hover,
+.detalii-page__back-btn:hover,
+.detalii-page__submit-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.detalii-page__alert {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.detalii-page__alert--error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.detalii-page__card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.detalii-page__form-card {
+  padding: 24px;
+}
+
+.detalii-page__table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.detalii-page__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.detalii-page__table thead {
+  background: #f8fafc;
+}
+
+.detalii-page__table th {
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 700;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detalii-page__table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #eef2f7;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.detalii-page__table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.detalii-page__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.detalii-page__action-btn {
+  border: none;
+  text-decoration: none;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.detalii-page__action-btn--edit {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.detalii-page__action-btn--edit:hover {
+  background: #bbf7d0;
+}
+
+.detalii-page__action-btn--delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.detalii-page__action-btn--delete:hover {
+  background: #fecaca;
+}
+
+.detalii-page__state {
+  min-height: 220px;
+  padding: 40px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #64748b;
+  font-size: 18px;
+}
+
+.detalii-page__form {
+  width: 100%;
+}
+
+.detalii-page__form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.detalii-page__form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.detalii-page__form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.detalii-page__form-group input,
+.detalii-page__form-group select {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+  background: white;
+}
+
+.detalii-page__form-group input:focus,
+.detalii-page__form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.detalii-page__form-group select:disabled {
+  background: #f1f5f9;
+  cursor: not-allowed;
+}
+
+.detalii-page__field-error {
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.detalii-page__form-actions {
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .detalii-page {
+    padding: 24px 16px;
+  }
+
+  .detalii-page__topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detalii-page__title {
+    font-size: 32px;
+  }
+
+  .detalii-page__table th,
+  .detalii-page__table td {
+    padding: 14px 12px;
+  }
+
+  .detalii-page__form-grid {
+    grid-template-columns: 1fr;
+  }
+}

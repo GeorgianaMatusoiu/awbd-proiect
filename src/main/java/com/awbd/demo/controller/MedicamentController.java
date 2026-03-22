@@ -4,10 +4,10 @@ import com.awbd.demo.dto.MedicamentRequest;
 import com.awbd.demo.entity.Medicament;
 import com.awbd.demo.service.MedicamentService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/medicamente")
@@ -26,8 +26,8 @@ public class MedicamentController {
     }
 
     @GetMapping
-    public List<Medicament> getAll() {
-        return service.getAll();
+    public Page<Medicament> getAll(Pageable pageable) {
+        return service.getAll(pageable);
     }
 
     @GetMapping("/{id}")

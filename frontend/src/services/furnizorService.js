@@ -1,6 +1,7 @@
 import api from "../api/axiosConfig";
 
-export const getFurnizori = () => api.get("/api/furnizori");
+export const getFurnizori = (params) =>
+  api.get("/api/furnizori", { params });
 
 export const getFurnizor = (id) => api.get(`/api/furnizori/${id}`);
 

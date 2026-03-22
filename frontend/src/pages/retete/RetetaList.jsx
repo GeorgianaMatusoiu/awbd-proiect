@@ -1,56 +1,56 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { deleteClient, getClients } from "../../services/clientService";
-import "./ClientList.css";
+import { deleteReteta, getRetete } from "../../services/retetaService";
+import "./Reteta.css";
 
-function ClientList() {
-  const [clients, setClients] = useState([]);
+function RetetaList() {
+  const [retete, setRetete] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const [sortField, setSortField] = useState("nume");
+  const [sortField, setSortField] = useState("dataTiparire");
   const [sortDirection, setSortDirection] = useState("asc");
 
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(5);
   const [totalPages, setTotalPages] = useState(0);
 
-  const loadClients = async (currentPage = page, currentSize = size) => {
+  const loadRetete = async (currentPage = page, currentSize = size) => {
     try {
       setLoading(true);
       setErrorMessage("");
 
-      const response = await getClients({
+      const response = await getRetete({
         page: currentPage,
         size: currentSize,
         sort: `${sortField},${sortDirection}`,
       });
 
-      setClients(response.data.content);
+      setRetete(response.data.content);
       setTotalPages(response.data.totalPages);
       setPage(response.data.number);
     } catch (error) {
-      console.error("Eroare la încărcarea clienților:", error);
-      setErrorMessage("Nu s-au putut încărca clienții.");
+      console.error("Eroare la încărcarea rețetelor:", error);
+      setErrorMessage("Nu s-au putut încărca rețetele.");
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    loadClients(page, size);
+    loadRetete(page, size);
   }, [page, size, sortField, sortDirection]);
 
   const handleDelete = async (id) => {
-    const confirmed = window.confirm("Sigur vrei să ștergi acest client?");
+    const confirmed = window.confirm("Sigur vrei să ștergi această rețetă?");
     if (!confirmed) return;
 
     try {
-      await deleteClient(id);
-      await loadClients(page, size);
+      await deleteReteta(id);
+      await loadRetete(page, size);
     } catch (error) {
       console.error("Eroare la ștergere:", error);
-      setErrorMessage("Clientul nu a putut fi șters.");
+      setErrorMessage("Rețeta nu a putut fi ștearsă.");
     }
   };
 
@@ -82,30 +82,30 @@ function ClientList() {
   };
 
   return (
-    <div className="client-page">
-      <div className="client-page__content">
-        <div className="client-page__topbar">
+    <div className="reteta-page">
+      <div className="reteta-page__content">
+        <div className="reteta-page__topbar">
           <div>
-            <p className="client-page__subtitle">Administrare clienți</p>
-            <h1 className="client-page__title">Clienți</h1>
+            <p className="reteta-page__subtitle">Administrare rețete</p>
+            <h1 className="reteta-page__title">Rețete</h1>
           </div>
 
-          <Link to="/clients/new" className="client-page__add-btn">
-            + Adaugă client
+          <Link to="/retete/new" className="reteta-page__add-btn">
+            + Adaugă rețetă
           </Link>
         </div>
 
         {errorMessage && (
-          <div className="client-page__alert client-page__alert--error">
+          <div className="reteta-page__alert reteta-page__alert--error">
             {errorMessage}
           </div>
         )}
 
-        <div className="client-page__card">
+        <div className="reteta-page__card">
           {loading ? (
-            <div className="client-page__state">Se încarcă...</div>
-          ) : clients.length === 0 ? (
-            <div className="client-page__state">Nu există clienți.</div>
+            <div className="reteta-page__state">Se încarcă...</div>
+          ) : retete.length === 0 ? (
+            <div className="reteta-page__state">Nu există rețete.</div>
           ) : (
             <>
               <div
@@ -129,8 +129,8 @@ function ClientList() {
                 <div>
                   <label style={{ marginRight: "8px" }}>Sortează după:</label>
                   <select value={sortField} onChange={handleSortFieldChange}>
-                    <option value="nume">Nume</option>
-                    <option value="varsta">Vârstă</option>
+                    <option value="dataTiparire">Data tipăririi</option>
+                    <option value="id">ID</option>
                   </select>
                 </div>
 
@@ -143,40 +143,44 @@ function ClientList() {
                 </div>
               </div>
 
-              <div className="client-page__table-wrapper">
-                <table className="client-page__table">
+              <div className="reteta-page__table-wrapper">
+                <table className="reteta-page__table">
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>CNP</th>
-                      <th>Nume</th>
-                      <th>Prenume</th>
-                      <th>Vârstă</th>
-                      <th>Telefon</th>
+                      <th>Data tipăririi</th>
+                      <th>Client</th>
+                      <th>Farmacist</th>
                       <th>Acțiuni</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {clients.map((client) => (
-                      <tr key={client.id}>
-                        <td>{client.id}</td>
-                        <td>{client.cnp}</td>
-                        <td>{client.nume}</td>
-                        <td>{client.prenume}</td>
-                        <td>{client.varsta}</td>
-                        <td>{client.telefon}</td>
+                    {retete.map((reteta) => (
+                      <tr key={reteta.id}>
+                        <td>{reteta.id}</td>
+                        <td>{reteta.dataTiparire}</td>
                         <td>
-                          <div className="client-page__actions">
+                          {reteta.client
+                            ? `${reteta.client.nume} ${reteta.client.prenume}`
+                            : "-"}
+                        </td>
+                        <td>
+                          {reteta.farmacist
+                            ? `${reteta.farmacist.nume} ${reteta.farmacist.prenume}`
+                            : "-"}
+                        </td>
+                        <td>
+                          <div className="reteta-page__actions">
                             <Link
-                              to={`/clients/edit/${client.id}`}
-                              className="client-page__action-btn client-page__action-btn--edit"
+                              to={`/retete/edit/${reteta.id}`}
+                              className="reteta-page__action-btn reteta-page__action-btn--edit"
                             >
                               Edit
                             </Link>
 
                             <button
-                              onClick={() => handleDelete(client.id)}
-                              className="client-page__action-btn client-page__action-btn--delete"
+                              onClick={() => handleDelete(reteta.id)}
+                              className="reteta-page__action-btn reteta-page__action-btn--delete"
                             >
                               Delete
                             </button>
@@ -219,4 +223,4 @@ function ClientList() {
   );
 }
 
-export default ClientList;
+export default RetetaList;
