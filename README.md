@@ -122,3 +122,11 @@ Categorie + Prospect + Furnizor → Medicament
 Test Database
 
 Integration tests folosesc profilul test, configurat cu baza de date H2 in-memory în application-test.yml, pentru rularea rapidă și izolată a testelor.
+
+## Views și Validare
+
+Interfața aplicației este realizată în React și include pagini și formulare CRUD pentru entitățile principale. Validarea este implementată atât server-side, folosind Bean Validation (@Valid, @NotNull, @NotBlank, @Min, @DecimalMin), cât și client-side, în formularele React. Erorile sunt afișate într-un mod user-friendly, iar tratarea excepțiilor este realizată prin GlobalExceptionHandler în backend și pagini custom 404 și 500 în frontend.
+
+## Logging
+
+Aplicația utilizează SLF4J + Logback, configurate prin logback-spring.xml. Sunt folosite nivelurile INFO, DEBUG și ERROR, atât în service-uri, cât și în exception handler. Logurile sunt scrise în fișiere separate (application.log și error.log). În plus, a fost implementat și un aspect AOP pentru logging automat al intrării, ieșirii și erorilor din metodele service.
