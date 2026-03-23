@@ -1,6 +1,6 @@
 import api from "../api/axiosConfig";
 
-export const getRetete = (params) => api.get("/api/retete", { params });
+export const getRetete = () => api.get("/api/retete");
 
 export const getReteta = (id) => api.get(`/api/retete/${id}`);
 

@@ -1,6 +1,6 @@
 import api from "../api/axiosConfig";
 
-export const getProfiluri = (params) => api.get("/api/profiluri", { params });
+export const getProfiluri = () => api.get("/api/profiluri");
 
 export const getProfil = (id) => api.get(`/api/profiluri/${id}`);
 

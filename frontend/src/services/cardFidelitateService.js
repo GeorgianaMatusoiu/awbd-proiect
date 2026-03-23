@@ -1,6 +1,6 @@
 import api from "../api/axiosConfig";
 
-export const getCarduri = (params) => api.get("/api/carduri", { params });
+export const getCarduri = () => api.get("/api/carduri");
 
 export const getCard = (id) => api.get(`/api/carduri/${id}`);
 

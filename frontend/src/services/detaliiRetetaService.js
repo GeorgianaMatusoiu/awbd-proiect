@@ -1,7 +1,6 @@
 import api from "../api/axiosConfig";
 
-export const getDetaliiRetete = (params) =>
-  api.get("/api/detalii-retete", { params });
+export const getDetaliiRetete = () => api.get("/api/detalii-retete");
 
 export const getDetaliuReteta = (retetaId, medicamentId) =>
   api.get(`/api/detalii-retete/${retetaId}/${medicamentId}`);
