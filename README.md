@@ -130,3 +130,20 @@ Interfața aplicației este realizată în React și include pagini și formular
 ## Logging
 
 Aplicația utilizează SLF4J + Logback, configurate prin logback-spring.xml. Sunt folosite nivelurile INFO, DEBUG și ERROR, atât în service-uri, cât și în exception handler. Logurile sunt scrise în fișiere separate (application.log și error.log). În plus, a fost implementat și un aspect AOP pentru logging automat al intrării, ieșirii și erorilor din metodele service.
+
+## Paginare și Sortare
+
+A fost implementată paginare backend folosind `Pageable` și `Page<T>` pentru entitățile aplicației.  
+În frontend, listele folosesc parametrii `page`, `size` și `sort`, trimiși către backend prin query params.
+
+Funcționalități implementate:
+- navigare între pagini (`Previous / Next`)
+- configurare dimensiune pagină
+- sortare ascendentă/descendentă
+- minimum 2 criterii de sortare pentru fiecare entitate
+
+Exemple de criterii:
+- Client: `nume`, `varsta`
+- Farmacist: `nume`, `salariu`
+- Furnizor: `nume`, `oras`, `tara`
+- Medicament: `denumire`, `pret`, `dataExpirare`
