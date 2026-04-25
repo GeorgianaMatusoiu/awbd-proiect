@@ -33,8 +33,8 @@ function CardFidelitateForm() {
 
   const loadClients = async () => {
     try {
-      const response = await getClients();
-      setClients(response.data);
+      const response = await getClients({ page: 0, size: 100 });
+      setClients(response.data.content);
     } catch (error) {
       console.error("Eroare la încărcarea clienților:", error);
       setServerError("Nu s-au putut încărca clienții.");

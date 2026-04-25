@@ -36,25 +36,25 @@ function DetaliiRetetaForm() {
     }
   }, [retetaId, medicamentId]);
 
-  const loadRetete = async () => {
-    try {
-      const response = await getRetete();
-      setRetete(response.data);
-    } catch (error) {
-      console.error("Eroare la încărcarea rețetelor:", error);
-      setServerError("Nu s-au putut încărca rețetele.");
-    }
-  };
+ const loadRetete = async () => {
+   try {
+     const response = await getRetete({ page: 0, size: 100 });
+     setRetete(response.data.content);
+   } catch (error) {
+     console.error("Eroare la încărcarea rețetelor:", error);
+     setServerError("Nu s-au putut încărca rețetele.");
+   }
+ };
 
-  const loadMedicamente = async () => {
-    try {
-      const response = await getMedicamente();
-      setMedicamente(response.data);
-    } catch (error) {
-      console.error("Eroare la încărcarea medicamentelor:", error);
-      setServerError("Nu s-au putut încărca medicamentele.");
-    }
-  };
+ const loadMedicamente = async () => {
+   try {
+     const response = await getMedicamente({ page: 0, size: 100 });
+     setMedicamente(response.data.content);
+   } catch (error) {
+     console.error("Eroare la încărcarea medicamentelor:", error);
+     setServerError("Nu s-au putut încărca medicamentele.");
+   }
+ };
 
   const loadDetaliu = async () => {
     try {

@@ -35,25 +35,25 @@ function RetetaForm() {
     }
   }, [id]);
 
-  const loadClients = async () => {
-    try {
-      const response = await getClients();
-      setClients(response.data);
-    } catch (error) {
-      console.error("Eroare la încărcarea clienților:", error);
-      setServerError("Nu s-au putut încărca clienții.");
-    }
-  };
+ const loadClients = async () => {
+   try {
+     const response = await getClients({ page: 0, size: 100 });
+     setClients(response.data.content);
+   } catch (error) {
+     console.error("Eroare la încărcarea clienților:", error);
+     setServerError("Nu s-au putut încărca clienții.");
+   }
+ };
 
-  const loadFarmacisti = async () => {
-    try {
-      const response = await getFarmacisti();
-      setFarmacisti(response.data);
-    } catch (error) {
-      console.error("Eroare la încărcarea farmaciștilor:", error);
-      setServerError("Nu s-au putut încărca farmaciștii.");
-    }
-  };
+ const loadFarmacisti = async () => {
+   try {
+     const response = await getFarmacisti({ page: 0, size: 100 });
+     setFarmacisti(response.data.content);
+   } catch (error) {
+     console.error("Eroare la încărcarea farmaciștilor:", error);
+     setServerError("Nu s-au putut încărca farmaciștii.");
+   }
+ };
 
   const loadReteta = async () => {
     try {

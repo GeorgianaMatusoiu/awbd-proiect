@@ -39,22 +39,22 @@ function MedicamentForm() {
     }
   }, [id]);
 
-  const loadDropdowns = async () => {
-    try {
-      const [furnizoriRes, prospecteRes, categoriiRes] = await Promise.all([
-        getFurnizori(),
-        getProspecte(),
-        getCategoriiMedicamente(),
-      ]);
+ const loadDropdowns = async () => {
+   try {
+     const [furnizoriRes, prospecteRes, categoriiRes] = await Promise.all([
+       getFurnizori({ page: 0, size: 100 }),
+       getProspecte({ page: 0, size: 100 }),
+       getCategoriiMedicamente({ page: 0, size: 100 }),
+     ]);
 
-      setFurnizori(furnizoriRes.data);
-      setProspecte(prospecteRes.data);
-      setCategorii(categoriiRes.data);
-    } catch (error) {
-      console.error("Eroare la încărcarea listelor:", error);
-      setServerError("Nu s-au putut încărca datele auxiliare.");
-    }
-  };
+     setFurnizori(furnizoriRes.data.content);
+     setProspecte(prospecteRes.data.content);
+     setCategorii(categoriiRes.data.content);
+   } catch (error) {
+     console.error("Eroare la încărcarea listelor:", error);
+     setServerError("Nu s-au putut încărca datele auxiliare.");
+   }
+ };
 
   const loadMedicament = async () => {
     try {

@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .navbar__logo a {
@@ -20,9 +21,31 @@
   font-weight: bold;
 }
 
+.navbar__role {
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.navbar__role--admin {
+  background-color: #ffe7b3;
+  color: #7a4d00;
+  border: 1px solid #f0c36d;
+}
+
+.navbar__role--user {
+  background-color: #dff3ff;
+  color: #0b4f75;
+  border: 1px solid #8fd0f3;
+}
+
 .navbar__links {
   display: flex;
   gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .navbar__link {
@@ -34,4 +57,18 @@
 
 .navbar__link:hover {
   color: white;
+}
+
+.navbar__logout {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar__logout:hover {
+  background: #1d4ed8;
 }
