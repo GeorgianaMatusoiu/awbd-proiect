@@ -1,0 +1,136 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #eef3f9 0%, #dbe7f3 100%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 470px;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 40px 36px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.login-title-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.login-title {
+  margin: 0;
+  padding: 14px 34px;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+}
+
+.login-alert {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-alert--error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-group label {
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.login-form-group input[type="text"],
+.login-form-group input[type="password"] {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  font-size: 16px;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.login-form-group input[type="text"]:focus,
+.login-form-group input[type="password"]:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.login-checkbox {
+  color: #334155;
+  font-size: 14px;
+}
+
+.login-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-btn {
+  margin-top: 8px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+}
+
+.login-btn:hover {
+  transform: translateY(-1px);
+}
+
+.login-footer {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 15px;
+  color: #475569;
+}
+
+.login-footer a {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
