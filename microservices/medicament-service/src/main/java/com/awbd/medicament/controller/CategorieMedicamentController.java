@@ -1,0 +1,47 @@
+package com.awbd.medicament.controller;
+
+import com.awbd.medicament.entity.CategorieMedicament;
+import com.awbd.medicament.service.CategorieMedicamentService;
+import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/categorii")
+public class CategorieMedicamentController {
+
+    private final CategorieMedicamentService service;
+
+    public CategorieMedicamentController(CategorieMedicamentService service) {
+        this.service = service;
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public CategorieMedicament create(@RequestBody @Valid CategorieMedicament categorie) {
+        return service.create(categorie);
+    }
+
+    @GetMapping
+    public Page<CategorieMedicament> getAll(Pageable pageable) {
+        return service.getAll(pageable);
+    }
+
+    @GetMapping("/{id}")
+    public CategorieMedicament getById(@PathVariable Long id) {
+        return service.getById(id);
+    }
+
+    @PutMapping("/{id}")
+    public CategorieMedicament update(@PathVariable Long id, @RequestBody @Valid CategorieMedicament categorie) {
+        return service.update(id, categorie);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        service.delete(id);
+    }
+}
