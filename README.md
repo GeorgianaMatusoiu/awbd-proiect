@@ -172,3 +172,19 @@ Au fost implementate:
 Aplicația monolitică inițială a fost migrată către o arhitectură bazată pe microservicii. Au fost create trei microservicii independente de business: client-service, medicament-service și reteta-service. Fiecare microserviciu are propriul proiect Maven, propriile configurații, propriul port, propriile controllere, service-uri, repository-uri și entități.
 
 Pentru infrastructură au fost adăugate discovery-service, implementat cu Eureka Server, și gateway-service, implementat cu Spring Cloud Gateway. Serviciile se înregistrează în Eureka și pot fi accesate prin gateway.
+
+## Configurare centralizată
+
+Pentru configurarea centralizată a fost adăugat microserviciul `config-service`, implementat cu Spring Cloud Config Server. Acesta rulează pe portul `8888` și citește configurațiile din folderul local `config-repo`.
+
+În `config-repo` au fost externalizate configurațiile pentru:
+
+- `client-service`
+- `medicament-service`
+- `reteta-service`
+- `gateway-service`
+
+Fiecare microserviciu folosește Spring Cloud Config Client și preia configurația prin:
+
+```properties
+spring.config.import=optional:configserver:http://localhost:8888
