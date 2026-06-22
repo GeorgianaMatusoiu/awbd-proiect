@@ -166,3 +166,9 @@ Au fost implementate:
 - funcționalitate **Remember Me**
 
 În frontend, meniul lateral și acțiunile disponibile sunt afișate dinamic în funcție de rolul utilizatorului autentificat.
+
+ ## Microservicii
+
+Aplicația monolitică inițială a fost migrată către o arhitectură bazată pe microservicii. Au fost create trei microservicii independente de business: client-service, medicament-service și reteta-service. Fiecare microserviciu are propriul proiect Maven, propriile configurații, propriul port, propriile controllere, service-uri, repository-uri și entități.
+
+Pentru infrastructură au fost adăugate discovery-service, implementat cu Eureka Server, și gateway-service, implementat cu Spring Cloud Gateway. Serviciile se înregistrează în Eureka și pot fi accesate prin gateway.
