@@ -147,3 +147,22 @@ Exemple de criterii:
 - Farmacist: `nume`, `salariu`
 - Furnizor: `nume`, `oras`, `tara`
 - Medicament: `denumire`, `pret`, `dataExpirare`
+
+  ## Spring Security
+
+Pentru securizarea aplicației am utilizat **Spring Security** cu autentificare JDBC. Utilizatorii și rolurile sunt salvate în baza de date, în tabelele specifice autentificării.
+
+Au fost definite două roluri:
+- `ROLE_USER`
+- `ROLE_ADMIN`
+
+Autorizarea este realizată pe baza rolurilor, astfel încât accesul la endpoint-uri și la funcționalitățile din interfață diferă în funcție de utilizatorul autentificat. Rolul `ADMIN` are acces complet, iar rolul `USER` are acces doar la entitățile și operațiile permise.
+
+Au fost implementate:
+- autentificare JDBC
+- pagină de login custom
+- logout funcțional
+- password encoding cu **BCrypt**
+- funcționalitate **Remember Me**
+
+În frontend, meniul lateral și acțiunile disponibile sunt afișate dinamic în funcție de rolul utilizatorului autentificat.
