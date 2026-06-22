@@ -1,0 +1,82 @@
+2026-04-26 20:16:41 [ERROR] c.a.d.service.CardFidelitateService - Crearea cardului a esuat: clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:41 [ERROR] c.a.d.service.CardFidelitateService - Crearea cardului a esuat: clientul cu id=1 are deja card de fidelitate
+2026-04-26 20:16:42 [ERROR] c.a.d.service.CardFidelitateService - Actualizarea cardului a esuat: clientul cu id=2 nu a fost gasit
+2026-04-26 20:16:42 [ERROR] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=99 nu a fost gasit
+2026-04-26 20:16:42 [ERROR] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=99 nu a fost gasit
+2026-04-26 20:16:42 [ERROR] c.a.d.service.CardFidelitateService - Actualizarea cardului a esuat: clientul cu id=2 are deja card de fidelitate
+2026-04-26 20:16:43 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:16:43 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:16:43 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Actualizarea clientului a esuat: CNP duplicat 9999999999999
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: exista deja client cu CNP 1234567890123
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: CNP lipsa
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: CNP lipsa
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:45 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: medicamentul cu id=2 nu a fost gasit
+2026-04-26 20:16:45 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: exista deja medicamentul cu id=2 in reteta cu id=1
+2026-04-26 20:16:45 [ERROR] c.a.d.service.DetaliiRetetaService - Detaliile pentru retetaId=1 si medicamentId=2 nu au fost gasite
+2026-04-26 20:16:45 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: reteta cu id=1 nu a fost gasita
+2026-04-26 20:16:45 [ERROR] c.awbd.demo.service.FarmacistService - Farmacistul cu id=99 nu a fost gasit
+2026-04-26 20:16:45 [ERROR] c.awbd.demo.service.FarmacistService - Crearea farmacistului a esuat: exista deja farmacist cu email maria.ionescu@example.com
+2026-04-26 20:16:46 [ERROR] c.awbd.demo.service.FurnizorService - Furnizorul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.MedicamentService - Crearea medicamentului a esuat: furnizorul cu id=1 nu a fost gasit
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.MedicamentService - Medicamentul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Crearea profilului a esuat: clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Crearea profilului a esuat: clientul cu id=1 are deja profil
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Profilul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Actualizarea profilului a esuat: clientul cu id=2 nu a fost gasit
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Profilul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Actualizarea profilului a esuat: clientul cu id=2 are deja profil
+2026-04-26 20:16:47 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:16:47 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:16:47 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Actualizarea retetei a esuat: farmacistul cu id=20 nu a fost gasit
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Crearea retetei a esuat: clientul cu id=1 nu a fost gasit
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Actualizarea retetei a esuat: clientul cu id=10 nu a fost gasit
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Crearea retetei a esuat: farmacistul cu id=2 nu a fost gasit
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Crearea cardului a esuat: clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Crearea cardului a esuat: clientul cu id=1 are deja card de fidelitate
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Actualizarea cardului a esuat: clientul cu id=2 nu a fost gasit
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=99 nu a fost gasit
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=99 nu a fost gasit
+2026-04-26 20:28:48 [ERROR] c.a.d.service.CardFidelitateService - Actualizarea cardului a esuat: clientul cu id=2 are deja card de fidelitate
+2026-04-26 20:28:48 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:28:48 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:28:48 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:28:48 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:48 [ERROR] com.awbd.demo.service.ClientService - Actualizarea clientului a esuat: CNP duplicat 9999999999999
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: exista deja client cu CNP 1234567890123
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: CNP lipsa
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: CNP lipsa
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:50 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: medicamentul cu id=2 nu a fost gasit
+2026-04-26 20:28:50 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: exista deja medicamentul cu id=2 in reteta cu id=1
+2026-04-26 20:28:50 [ERROR] c.a.d.service.DetaliiRetetaService - Detaliile pentru retetaId=1 si medicamentId=2 nu au fost gasite
+2026-04-26 20:28:50 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: reteta cu id=1 nu a fost gasita
+2026-04-26 20:28:50 [ERROR] c.awbd.demo.service.FarmacistService - Farmacistul cu id=99 nu a fost gasit
+2026-04-26 20:28:50 [ERROR] c.awbd.demo.service.FarmacistService - Crearea farmacistului a esuat: exista deja farmacist cu email maria.ionescu@example.com
+2026-04-26 20:28:51 [ERROR] c.awbd.demo.service.FurnizorService - Furnizorul cu id=99 nu a fost gasit
+2026-04-26 20:28:51 [ERROR] c.a.demo.service.MedicamentService - Crearea medicamentului a esuat: furnizorul cu id=1 nu a fost gasit
+2026-04-26 20:28:51 [ERROR] c.a.demo.service.MedicamentService - Medicamentul cu id=99 nu a fost gasit
+2026-04-26 20:28:52 [ERROR] c.a.demo.service.ProfilClientService - Crearea profilului a esuat: clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:52 [ERROR] c.a.demo.service.ProfilClientService - Crearea profilului a esuat: clientul cu id=1 are deja profil
+2026-04-26 20:28:52 [ERROR] c.a.demo.service.ProfilClientService - Profilul cu id=99 nu a fost gasit
+2026-04-26 20:28:53 [ERROR] c.a.demo.service.ProfilClientService - Actualizarea profilului a esuat: clientul cu id=2 nu a fost gasit
+2026-04-26 20:28:53 [ERROR] c.a.demo.service.ProfilClientService - Profilul cu id=99 nu a fost gasit
+2026-04-26 20:28:53 [ERROR] c.a.demo.service.ProfilClientService - Actualizarea profilului a esuat: clientul cu id=2 are deja profil
+2026-04-26 20:28:53 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:28:53 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:28:53 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Actualizarea retetei a esuat: farmacistul cu id=20 nu a fost gasit
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Crearea retetei a esuat: clientul cu id=1 nu a fost gasit
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Actualizarea retetei a esuat: clientul cu id=10 nu a fost gasit
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Crearea retetei a esuat: farmacistul cu id=2 nu a fost gasit

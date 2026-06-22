@@ -1,0 +1,995 @@
+2026-04-26 20:06:35 [INFO] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-04-26 20:06:36 [INFO] com.awbd.demo.AwbdApplication - Starting AwbdApplication using Java 17.0.17 with PID 4624 (C:\Users\Dell\Desktop\awbd\monolith\target\classes started by Dell in C:\Users\Dell\Desktop\awbd\monolith)
+2026-04-26 20:06:36 [DEBUG] com.awbd.demo.AwbdApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-26 20:06:36 [INFO] com.awbd.demo.AwbdApplication - The following 1 profile is active: "dev"
+2026-04-26 20:06:37 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26 20:06:37 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113 ms. Found 10 JPA repository interfaces.
+2026-04-26 20:06:38 [INFO] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-26 20:06:39 [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-26 20:06:39 [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-26 20:06:39 [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-26 20:06:39 [INFO] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3083 ms
+2026-04-26 20:06:39 [INFO] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26 20:06:39 [INFO] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-04-26 20:06:40 [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26 20:06:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-26 20:06:40 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1618c98a
+2026-04-26 20:06:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-26 20:06:40 [WARN] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26 20:06:40 [INFO] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/farmacie_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.9
+	Default catalog/schema: farmacie_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26 20:06:42 [INFO] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26 20:06:42 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:06:42 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:06:42 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:06:42 [INFO] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-26 20:06:43 [WARN] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26 20:06:43 [INFO] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-26 20:06:43 [WARN] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-26 20:06:44 [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-26 20:06:44 [INFO] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-26 20:06:44 [INFO] com.awbd.demo.AwbdApplication - Started AwbdApplication in 9.975 seconds (process running for 10.751)
+2026-04-26 20:13:21 [INFO] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26 20:13:22 [INFO] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-26 20:13:22 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:13:22 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-26 20:13:22 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-26 20:15:55 [INFO] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-04-26 20:15:55 [INFO] com.awbd.demo.AwbdApplicationTests - Starting AwbdApplicationTests using Java 17.0.17 with PID 4744 (started by Dell in C:\Users\Dell\Desktop\awbd\monolith)
+2026-04-26 20:15:55 [DEBUG] com.awbd.demo.AwbdApplicationTests - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-26 20:15:55 [INFO] com.awbd.demo.AwbdApplicationTests - The following 1 profile is active: "dev"
+2026-04-26 20:16:00 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26 20:16:00 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 345 ms. Found 10 JPA repository interfaces.
+2026-04-26 20:16:05 [INFO] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26 20:16:05 [INFO] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-04-26 20:16:09 [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26 20:16:09 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-26 20:16:10 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f8c7cd7
+2026-04-26 20:16:10 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-26 20:16:10 [WARN] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26 20:16:11 [INFO] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/farmacie_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.9
+	Default catalog/schema: farmacie_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26 20:16:17 [INFO] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26 20:16:17 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:16:18 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:16:18 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:16:19 [INFO] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-26 20:16:21 [WARN] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26 20:16:22 [INFO] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-26 20:16:22 [WARN] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-26 20:16:26 [INFO] com.awbd.demo.AwbdApplicationTests - Started AwbdApplicationTests in 34.166 seconds (process running for 43.709)
+2026-04-26 20:16:27 [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.awbd.demo.integration.ClientCardFidelitateIntegrationTest]: ClientCardFidelitateIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-26 20:16:28 [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.awbd.demo.AwbdApplication for test class com.awbd.demo.integration.ClientCardFidelitateIntegrationTest
+2026-04-26 20:16:28 [INFO] c.a.d.i.ClientCardFidelitateIntegrationTest - Starting ClientCardFidelitateIntegrationTest using Java 17.0.17 with PID 4744 (started by Dell in C:\Users\Dell\Desktop\awbd\monolith)
+2026-04-26 20:16:28 [DEBUG] c.a.d.i.ClientCardFidelitateIntegrationTest - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-26 20:16:28 [INFO] c.a.d.i.ClientCardFidelitateIntegrationTest - The following 1 profile is active: "test"
+2026-04-26 20:16:29 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26 20:16:29 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 10 JPA repository interfaces.
+2026-04-26 20:16:29 [INFO] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26 20:16:29 [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26 20:16:29 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-04-26 20:16:31 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-26 20:16:31 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-04-26 20:16:31 [INFO] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:testdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26 20:16:32 [INFO] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26 20:16:32 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:16:32 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:16:32 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:16:33 [WARN] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26 20:16:33 [INFO] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-26 20:16:33 [WARN] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-26 20:16:34 [INFO] o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-04-26 20:16:34 [INFO] c.a.d.i.ClientCardFidelitateIntegrationTest - Started ClientCardFidelitateIntegrationTest in 6.674 seconds (process running for 52.092)
+2026-04-26 20:16:34 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ClientService.create cu argumente: [com.awbd.demo.entity.Client@18c8c627]
+2026-04-26 20:16:34 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:16:34 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Popescu, prenume=Ana, cnp=1234567890123
+2026-04-26 20:16:37 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=1
+2026-04-26 20:16:37 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ClientService.create cu rezultat: com.awbd.demo.entity.Client@18c8c627
+2026-04-26 20:16:37 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.CardFidelitateService.create cu argumente: [com.awbd.demo.dto.CardFidelitateRequest@4834bf71]
+2026-04-26 20:16:37 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:16:37 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=gold, puncte=200, clientId=1
+2026-04-26 20:16:37 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate a fost creat cu succes, id=1
+2026-04-26 20:16:37 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.CardFidelitateService.create cu rezultat: com.awbd.demo.entity.CardFidelitate@1af83dc8
+2026-04-26 20:16:37 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.CardFidelitateService.getById cu argumente: [1]
+2026-04-26 20:16:37 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:16:37 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.CardFidelitateService.getById cu rezultat: com.awbd.demo.entity.CardFidelitate@1af83dc8
+2026-04-26 20:16:37 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.CardFidelitateService.getAll cu argumente: [Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-26 20:16:37 [INFO] c.a.d.service.CardFidelitateService - Se solicita lista paginata a cardurilor de fidelitate
+2026-04-26 20:16:37 [DEBUG] c.a.d.service.CardFidelitateService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:38 [DEBUG] c.a.d.service.CardFidelitateService - Au fost gasite 1 carduri pe pagina curenta din total 1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.CardFidelitateService.getAll cu rezultat: Page 1 of 1 containing com.awbd.demo.entity.CardFidelitate instances
+2026-04-26 20:16:38 [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.awbd.demo.integration.ClientProfilClientIntegrationTest]: ClientProfilClientIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-26 20:16:38 [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.awbd.demo.AwbdApplication for test class com.awbd.demo.integration.ClientProfilClientIntegrationTest
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ClientService.create cu argumente: [com.awbd.demo.entity.Client@101b0fff]
+2026-04-26 20:16:38 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:16:38 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Ionescu, prenume=Maria, cnp=9876543210123
+2026-04-26 20:16:38 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=2
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ClientService.create cu rezultat: com.awbd.demo.entity.Client@101b0fff
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ProfilClientService.create cu argumente: [com.awbd.demo.dto.ProfilClientRequest@56930e8b]
+2026-04-26 20:16:38 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:16:38 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=Antigripal, alergie=Polen, clientId=2
+2026-04-26 20:16:38 [INFO] c.a.demo.service.ProfilClientService - Profilul clientului a fost creat cu succes, id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ProfilClientService.create cu rezultat: com.awbd.demo.entity.ProfilClient@40654726
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ProfilClientService.getById cu argumente: [1]
+2026-04-26 20:16:38 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ProfilClientService.getById cu rezultat: com.awbd.demo.entity.ProfilClient@40654726
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ProfilClientService.getAll cu argumente: [Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-26 20:16:38 [INFO] c.a.demo.service.ProfilClientService - Se solicita lista paginata a profilurilor de clienti
+2026-04-26 20:16:38 [DEBUG] c.a.demo.service.ProfilClientService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:38 [DEBUG] c.a.demo.service.ProfilClientService - Au fost gasite 1 profiluri pe pagina curenta din total 1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ProfilClientService.getAll cu rezultat: Page 1 of 1 containing com.awbd.demo.entity.ProfilClient instances
+2026-04-26 20:16:38 [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.awbd.demo.integration.MedicamentIntegrationTest]: MedicamentIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-26 20:16:38 [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.awbd.demo.AwbdApplication for test class com.awbd.demo.integration.MedicamentIntegrationTest
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.CategorieMedicamentService.create cu argumente: [com.awbd.demo.entity.CategorieMedicament@309750db]
+2026-04-26 20:16:38 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca crearea unei categorii de medicament
+2026-04-26 20:16:38 [DEBUG] c.a.d.s.CategorieMedicamentService - Date primite pentru creare categorie: stoc=100, temperatura=20
+2026-04-26 20:16:38 [INFO] c.a.d.s.CategorieMedicamentService - Categoria a fost creata cu succes, id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.CategorieMedicamentService.create cu rezultat: com.awbd.demo.entity.CategorieMedicament@309750db
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ProspectService.create cu argumente: [com.awbd.demo.entity.Prospect@45cc0dda]
+2026-04-26 20:16:38 [INFO] c.awbd.demo.service.ProspectService - Se incearca crearea unui prospect nou
+2026-04-26 20:16:38 [DEBUG] c.awbd.demo.service.ProspectService - Date primite pentru creare prospect: afectiuni=Durere, febra, administrare=2 comprimate pe zi
+2026-04-26 20:16:38 [INFO] c.awbd.demo.service.ProspectService - Prospect creat cu succes, id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ProspectService.create cu rezultat: com.awbd.demo.entity.Prospect@45cc0dda
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.FurnizorService.create cu argumente: [com.awbd.demo.entity.Furnizor@2cdd1b87]
+2026-04-26 20:16:38 [INFO] c.awbd.demo.service.FurnizorService - Se incearca crearea unui furnizor nou
+2026-04-26 20:16:38 [DEBUG] c.awbd.demo.service.FurnizorService - Date primite pentru creare furnizor: nume=FarmSupplier, adresa=Str. Lalelelor 10, oras=Bucuresti, tara=Romania, telefon=0711111111
+2026-04-26 20:16:38 [INFO] c.awbd.demo.service.FurnizorService - Furnizor creat cu succes, id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.FurnizorService.create cu rezultat: com.awbd.demo.entity.Furnizor@2cdd1b87
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.MedicamentService.create cu argumente: [com.awbd.demo.dto.MedicamentRequest@7545967f]
+2026-04-26 20:16:38 [INFO] c.a.demo.service.MedicamentService - Se incearca crearea unui medicament nou
+2026-04-26 20:16:38 [DEBUG] c.a.demo.service.MedicamentService - Date primite pentru creare medicament: denumire=Paracetamol, dataExpirare=2027-01-01, pret=15.50, furnizorId=1, prospectId=1, categorieId=1
+2026-04-26 20:16:38 [INFO] c.a.demo.service.MedicamentService - Medicament creat cu succes, id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.MedicamentService.create cu rezultat: com.awbd.demo.entity.Medicament@71769c47
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.MedicamentService.getById cu argumente: [1]
+2026-04-26 20:16:38 [INFO] c.a.demo.service.MedicamentService - Se cauta medicamentul cu id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.MedicamentService.getById cu rezultat: com.awbd.demo.entity.Medicament@71769c47
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.MedicamentService.getAll cu argumente: [Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-26 20:16:38 [INFO] c.a.demo.service.MedicamentService - Se solicita lista paginata a medicamentelor
+2026-04-26 20:16:38 [DEBUG] c.a.demo.service.MedicamentService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:38 [DEBUG] c.a.demo.service.MedicamentService - Au fost gasite 1 medicamente pe pagina curenta din total 1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.MedicamentService.getAll cu rezultat: Page 1 of 1 containing com.awbd.demo.entity.Medicament instances
+2026-04-26 20:16:38 [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.awbd.demo.integration.RetetaIntegrationTest]: RetetaIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-26 20:16:38 [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.awbd.demo.AwbdApplication for test class com.awbd.demo.integration.RetetaIntegrationTest
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ClientService.create cu argumente: [com.awbd.demo.entity.Client@694970c1]
+2026-04-26 20:16:38 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:16:38 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Georgescu, prenume=Dan, cnp=5555555555555
+2026-04-26 20:16:38 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=3
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ClientService.create cu rezultat: com.awbd.demo.entity.Client@694970c1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.FarmacistService.create cu argumente: [com.awbd.demo.entity.Farmacist@9481e14]
+2026-04-26 20:16:38 [INFO] c.awbd.demo.service.FarmacistService - Se incearca crearea unui farmacist nou
+2026-04-26 20:16:38 [DEBUG] c.awbd.demo.service.FarmacistService - Date primite pentru creare farmacist: nume=Pop, prenume=Elena, email=elena.pop@test.com
+2026-04-26 20:16:38 [INFO] c.awbd.demo.service.FarmacistService - Farmacist creat cu succes, id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.FarmacistService.create cu rezultat: com.awbd.demo.entity.Farmacist@9481e14
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.RetetaService.create cu argumente: [com.awbd.demo.dto.RetetaRequest@2a9eedee]
+2026-04-26 20:16:38 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:16:38 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-03-08, clientId=3, farmacistId=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.service.RetetaService - Reteta a fost creata cu succes, id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.RetetaService.create cu rezultat: com.awbd.demo.entity.Reteta@8fa2de8
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.RetetaService.getById cu argumente: [1]
+2026-04-26 20:16:38 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.RetetaService.getById cu rezultat: com.awbd.demo.entity.Reteta@8fa2de8
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.RetetaService.getAll cu argumente: [Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-26 20:16:38 [INFO] com.awbd.demo.service.RetetaService - Se solicita lista paginata a retetelor
+2026-04-26 20:16:38 [DEBUG] com.awbd.demo.service.RetetaService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:38 [DEBUG] com.awbd.demo.service.RetetaService - Au fost gasite 1 retete pe pagina curenta din total 1
+2026-04-26 20:16:38 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.RetetaService.getAll cu rezultat: Page 1 of 1 containing com.awbd.demo.entity.Reteta instances
+2026-04-26 20:16:41 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:16:41 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=silver, puncte=50, clientId=99
+2026-04-26 20:16:41 [ERROR] c.a.d.service.CardFidelitateService - Crearea cardului a esuat: clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:41 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:16:41 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=mediu, puncte=100, clientId=1
+2026-04-26 20:16:41 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate a fost creat cu succes, id=null
+2026-04-26 20:16:41 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:16:41 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:16:41 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=silver, puncte=50, clientId=1
+2026-04-26 20:16:41 [ERROR] c.a.d.service.CardFidelitateService - Crearea cardului a esuat: clientul cu id=1 are deja card de fidelitate
+2026-04-26 20:16:41 [INFO] c.a.d.service.CardFidelitateService - Se incearca stergerea cardului de fidelitate cu id=1
+2026-04-26 20:16:41 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:16:41 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=1 a fost sters cu succes
+2026-04-26 20:16:41 [INFO] c.a.d.service.CardFidelitateService - Se solicita lista paginata a cardurilor de fidelitate
+2026-04-26 20:16:41 [DEBUG] c.a.d.service.CardFidelitateService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:41 [DEBUG] c.a.d.service.CardFidelitateService - Au fost gasite 2 carduri pe pagina curenta din total 2
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se incearca actualizarea cardului de fidelitate cu id=1
+2026-04-26 20:16:42 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru update card: nivel=null, puncte=null, clientId=2
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:16:42 [ERROR] c.a.d.service.CardFidelitateService - Actualizarea cardului a esuat: clientul cu id=2 nu a fost gasit
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=99
+2026-04-26 20:16:42 [ERROR] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=99 nu a fost gasit
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se incearca stergerea cardului de fidelitate cu id=99
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=99
+2026-04-26 20:16:42 [ERROR] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=99 nu a fost gasit
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:16:42 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=gold, puncte=250, clientId=1
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate a fost creat cu succes, id=null
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se incearca actualizarea cardului de fidelitate cu id=1
+2026-04-26 20:16:42 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru update card: nivel=null, puncte=null, clientId=2
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=null a fost actualizat cu succes
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se incearca actualizarea cardului de fidelitate cu id=1
+2026-04-26 20:16:42 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru update card: nivel=gold, puncte=300, clientId=null
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=null a fost actualizat cu succes
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se incearca actualizarea cardului de fidelitate cu id=1
+2026-04-26 20:16:42 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru update card: nivel=null, puncte=null, clientId=2
+2026-04-26 20:16:42 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:16:42 [ERROR] c.a.d.service.CardFidelitateService - Actualizarea cardului a esuat: clientul cu id=2 are deja card de fidelitate
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca actualizarea categoriei cu id=99
+2026-04-26 20:16:43 [DEBUG] c.a.d.s.CategorieMedicamentService - Date primite pentru update: stoc=500, temperatura=10
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=99
+2026-04-26 20:16:43 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca crearea unei categorii de medicament
+2026-04-26 20:16:43 [DEBUG] c.a.d.s.CategorieMedicamentService - Date primite pentru creare categorie: stoc=100, temperatura=20
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Categoria a fost creata cu succes, id=null
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca stergerea categoriei cu id=99
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=99
+2026-04-26 20:16:43 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se solicita lista paginata a categoriilor de medicamente
+2026-04-26 20:16:43 [DEBUG] c.a.d.s.CategorieMedicamentService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:43 [DEBUG] c.a.d.s.CategorieMedicamentService - Au fost gasite 2 categorii pe pagina curenta din total 2
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca actualizarea categoriei cu id=1
+2026-04-26 20:16:43 [DEBUG] c.a.d.s.CategorieMedicamentService - Date primite pentru update: stoc=300, temperatura=5
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=1
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Categoria cu id=null a fost actualizata cu succes
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=1
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca stergerea categoriei cu id=1
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=1
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Categoria cu id=1 a fost stearsa cu succes
+2026-04-26 20:16:43 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=99
+2026-04-26 20:16:43 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se solicita lista paginata a clientilor
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Au fost gasiti 2 clienti pe pagina curenta din total 2
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca stergerea clientului cu id=1
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=1 a fost sters cu succes
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=null, prenume=null, cnp=9999999999999, varsta=null, telefon=null
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=null a fost actualizat cu succes
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=99
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=Test, prenume=null, cnp=null, varsta=null, telefon=null
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=99
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=null, prenume=null, cnp=9999999999999, varsta=null, telefon=null
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Actualizarea clientului a esuat: CNP duplicat 9999999999999
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=Ionescu, prenume=null, cnp=   , varsta=null, telefon=null
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=null a fost actualizat cu succes
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Popescu, prenume=Ana, cnp=1234567890123
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=null
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=Ionescu, prenume=Maria, cnp=null, varsta=30, telefon=0722222222
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=null a fost actualizat cu succes
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=null, prenume=null, cnp=1234567890123
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: exista deja client cu CNP 1234567890123
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=null, prenume=null, cnp=null
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: CNP lipsa
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=null, prenume=null, cnp=   
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: CNP lipsa
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=null, prenume=null, cnp=1234567890123, varsta=null, telefon=null
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=null a fost actualizat cu succes
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=99
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:16:43 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Popescu, prenume=Ana, cnp=1234567890123
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=null
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se incearca stergerea clientului cu id=99
+2026-04-26 20:16:43 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=99
+2026-04-26 20:16:43 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:45 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:16:45 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=25.50, cantitate=2
+2026-04-26 20:16:45 [INFO] c.a.d.service.DetaliiRetetaService - Detaliul de reteta a fost creat cu succes pentru retetaId=1 si medicamentId=2
+2026-04-26 20:16:45 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:16:45 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=null, cantitate=null
+2026-04-26 20:16:45 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: medicamentul cu id=2 nu a fost gasit
+2026-04-26 20:16:45 [INFO] c.a.d.service.DetaliiRetetaService - Se cauta detaliul pentru retetaId=1 si medicamentId=2
+2026-04-26 20:16:45 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:16:45 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=null, cantitate=null
+2026-04-26 20:16:45 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: exista deja medicamentul cu id=2 in reteta cu id=1
+2026-04-26 20:16:45 [INFO] c.a.d.service.DetaliiRetetaService - Se cauta detaliul pentru retetaId=1 si medicamentId=2
+2026-04-26 20:16:45 [ERROR] c.a.d.service.DetaliiRetetaService - Detaliile pentru retetaId=1 si medicamentId=2 nu au fost gasite
+2026-04-26 20:16:45 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:16:45 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=null, cantitate=null
+2026-04-26 20:16:45 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: reteta cu id=1 nu a fost gasita
+2026-04-26 20:16:45 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:16:45 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=30.00, cantitate=3
+2026-04-26 20:16:45 [INFO] c.a.d.service.DetaliiRetetaService - Detaliul de reteta a fost creat cu succes pentru retetaId=1 si medicamentId=2
+2026-04-26 20:16:45 [INFO] c.awbd.demo.service.FarmacistService - Se incearca crearea unui farmacist nou
+2026-04-26 20:16:45 [DEBUG] c.awbd.demo.service.FarmacistService - Date primite pentru creare farmacist: nume=Ionescu, prenume=Maria, email=maria.ionescu@example.com
+2026-04-26 20:16:45 [INFO] c.awbd.demo.service.FarmacistService - Farmacist creat cu succes, id=null
+2026-04-26 20:16:45 [INFO] c.awbd.demo.service.FarmacistService - Se cauta farmacistul cu id=1
+2026-04-26 20:16:45 [INFO] c.awbd.demo.service.FarmacistService - Se incearca crearea unui farmacist nou
+2026-04-26 20:16:45 [DEBUG] c.awbd.demo.service.FarmacistService - Date primite pentru creare farmacist: nume=Ionescu, prenume=Maria, email=maria.ionescu@example.com
+2026-04-26 20:16:45 [INFO] c.awbd.demo.service.FarmacistService - Farmacist creat cu succes, id=null
+2026-04-26 20:16:45 [INFO] c.awbd.demo.service.FarmacistService - Se cauta farmacistul cu id=99
+2026-04-26 20:16:45 [ERROR] c.awbd.demo.service.FarmacistService - Farmacistul cu id=99 nu a fost gasit
+2026-04-26 20:16:45 [INFO] c.awbd.demo.service.FarmacistService - Se incearca crearea unui farmacist nou
+2026-04-26 20:16:45 [DEBUG] c.awbd.demo.service.FarmacistService - Date primite pentru creare farmacist: nume=null, prenume=null, email=maria.ionescu@example.com
+2026-04-26 20:16:45 [ERROR] c.awbd.demo.service.FarmacistService - Crearea farmacistului a esuat: exista deja farmacist cu email maria.ionescu@example.com
+2026-04-26 20:16:45 [INFO] c.awbd.demo.service.FurnizorService - Se incearca crearea unui furnizor nou
+2026-04-26 20:16:45 [DEBUG] c.awbd.demo.service.FurnizorService - Date primite pentru creare furnizor: nume=FarmSupplier, adresa=Str. Lalelelor, oras=Bucuresti, tara=Romania, telefon=0711111111
+2026-04-26 20:16:45 [INFO] c.awbd.demo.service.FurnizorService - Furnizor creat cu succes, id=null
+2026-04-26 20:16:46 [INFO] c.awbd.demo.service.FurnizorService - Se cauta furnizorul cu id=1
+2026-04-26 20:16:46 [INFO] c.awbd.demo.service.FurnizorService - Se cauta furnizorul cu id=99
+2026-04-26 20:16:46 [ERROR] c.awbd.demo.service.FurnizorService - Furnizorul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [INFO] c.awbd.demo.service.FurnizorService - Se incearca crearea unui furnizor nou
+2026-04-26 20:16:46 [DEBUG] c.awbd.demo.service.FurnizorService - Date primite pentru creare furnizor: nume=FarmSupplier, adresa=Str. Lalelelor, oras=Bucuresti, tara=Romania, telefon=0711111111
+2026-04-26 20:16:46 [INFO] c.awbd.demo.service.FurnizorService - Furnizor creat cu succes, id=null
+2026-04-26 20:16:46 [INFO] c.a.demo.service.MedicamentService - Se cauta medicamentul cu id=1
+2026-04-26 20:16:46 [INFO] c.a.demo.service.MedicamentService - Se incearca crearea unui medicament nou
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.MedicamentService - Date primite pentru creare medicament: denumire=Paracetamol, dataExpirare=2027-05-10, pret=15.50, furnizorId=1, prospectId=2, categorieId=3
+2026-04-26 20:16:46 [INFO] c.a.demo.service.MedicamentService - Medicament creat cu succes, id=null
+2026-04-26 20:16:46 [INFO] c.a.demo.service.MedicamentService - Se incearca crearea unui medicament nou
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.MedicamentService - Date primite pentru creare medicament: denumire=null, dataExpirare=null, pret=null, furnizorId=1, prospectId=2, categorieId=3
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.MedicamentService - Crearea medicamentului a esuat: furnizorul cu id=1 nu a fost gasit
+2026-04-26 20:16:46 [INFO] c.a.demo.service.MedicamentService - Se cauta medicamentul cu id=99
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.MedicamentService - Medicamentul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=null, alergie=null, clientId=99
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Crearea profilului a esuat: clientul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se solicita lista paginata a profilurilor de clienti
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Au fost gasite 2 profiluri pe pagina curenta din total 2
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca actualizarea profilului cu id=1
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru update profil: vaccinari=null, alergie=null, clientId=2
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Profilul cu id=null a fost actualizat cu succes
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=null, alergie=null, clientId=1
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Crearea profilului a esuat: clientul cu id=1 are deja profil
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca actualizarea profilului cu id=1
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru update profil: vaccinari=COVID, alergie=Polen, clientId=null
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Profilul cu id=null a fost actualizat cu succes
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca stergerea profilului cu id=99
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=99
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Profilul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=Antigripal, alergie=Penicilina, clientId=1
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Profilul clientului a fost creat cu succes, id=null
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca stergerea profilului cu id=1
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Profilul cu id=1 a fost sters cu succes
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca actualizarea profilului cu id=1
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru update profil: vaccinari=null, alergie=null, clientId=2
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Actualizarea profilului a esuat: clientul cu id=2 nu a fost gasit
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=99
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Profilul cu id=99 nu a fost gasit
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=Hepatita B, alergie=Polen, clientId=1
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Profilul clientului a fost creat cu succes, id=null
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se incearca actualizarea profilului cu id=1
+2026-04-26 20:16:46 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru update profil: vaccinari=null, alergie=null, clientId=2
+2026-04-26 20:16:46 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:16:46 [ERROR] c.a.demo.service.ProfilClientService - Actualizarea profilului a esuat: clientul cu id=2 are deja profil
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se incearca actualizarea prospectului cu id=99
+2026-04-26 20:16:47 [DEBUG] c.awbd.demo.service.ProspectService - Date primite pentru update: afectiuni=Nou, administrare=null
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=99
+2026-04-26 20:16:47 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=1
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se incearca stergerea prospectului cu id=99
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=99
+2026-04-26 20:16:47 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se incearca actualizarea prospectului cu id=1
+2026-04-26 20:16:47 [DEBUG] c.awbd.demo.service.ProspectService - Date primite pentru update: afectiuni=Durere, febra, administrare=2 pe zi
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=1
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Prospectul cu id=null a fost actualizat cu succes
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se incearca crearea unui prospect nou
+2026-04-26 20:16:47 [DEBUG] c.awbd.demo.service.ProspectService - Date primite pentru creare prospect: afectiuni=Durere, febra, administrare=2 comprimate pe zi
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Prospect creat cu succes, id=null
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se incearca stergerea prospectului cu id=1
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=1
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Prospectul cu id=1 a fost sters cu succes
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=99
+2026-04-26 20:16:47 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:16:47 [INFO] c.awbd.demo.service.ProspectService - Se solicita lista paginata a prospectelor
+2026-04-26 20:16:47 [DEBUG] c.awbd.demo.service.ProspectService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:47 [DEBUG] c.awbd.demo.service.ProspectService - Au fost gasite 2 prospecte pe pagina curenta din total 2
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca actualizarea retetei cu id=1
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru update reteta: dataTiparire=2026-05-10, clientId=10, farmacistId=20
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Reteta cu id=null a fost actualizata cu succes
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca actualizarea retetei cu id=1
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru update reteta: dataTiparire=null, clientId=10, farmacistId=20
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Actualizarea retetei a esuat: farmacistul cu id=20 nu a fost gasit
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-03-08, clientId=1, farmacistId=2
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Reteta a fost creata cu succes, id=null
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca stergerea retetei cu id=1
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Reteta cu id=1 a fost stearsa cu succes
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca stergerea retetei cu id=99
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=99
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-03-08, clientId=1, farmacistId=2
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Crearea retetei a esuat: clientul cu id=1 nu a fost gasit
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=99
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca actualizarea retetei cu id=1
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru update reteta: dataTiparire=null, clientId=10, farmacistId=null
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Actualizarea retetei a esuat: clientul cu id=10 nu a fost gasit
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-04-01, clientId=1, farmacistId=2
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Reteta a fost creata cu succes, id=null
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca actualizarea retetei cu id=99
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru update reteta: dataTiparire=2026-05-10, clientId=null, farmacistId=null
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=99
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se solicita lista paginata a retetelor
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Au fost gasite 2 retete pe pagina curenta din total 2
+2026-04-26 20:16:47 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:16:47 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-03-08, clientId=1, farmacistId=2
+2026-04-26 20:16:47 [ERROR] com.awbd.demo.service.RetetaService - Crearea retetei a esuat: farmacistul cu id=2 nu a fost gasit
+2026-04-26 20:16:47 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:16:49 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-26 20:16:49 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-26 20:16:49 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:16:49 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-04-26 20:16:49 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-04-26 20:17:04 [INFO] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-04-26 20:17:04 [INFO] com.awbd.demo.AwbdApplication - Starting AwbdApplication using Java 17.0.17 with PID 12276 (C:\Users\Dell\Desktop\awbd\monolith\target\classes started by Dell in C:\Users\Dell\Desktop\awbd\monolith)
+2026-04-26 20:17:04 [DEBUG] com.awbd.demo.AwbdApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-26 20:17:04 [INFO] com.awbd.demo.AwbdApplication - The following 1 profile is active: "dev"
+2026-04-26 20:17:05 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26 20:17:06 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116 ms. Found 10 JPA repository interfaces.
+2026-04-26 20:17:07 [INFO] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-26 20:17:07 [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-26 20:17:07 [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-26 20:17:07 [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-26 20:17:07 [INFO] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2617 ms
+2026-04-26 20:17:07 [INFO] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26 20:17:07 [INFO] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-04-26 20:17:08 [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26 20:17:08 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-26 20:17:08 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1618c98a
+2026-04-26 20:17:08 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-26 20:17:08 [WARN] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26 20:17:08 [INFO] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/farmacie_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.9
+	Default catalog/schema: farmacie_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26 20:17:10 [INFO] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26 20:17:10 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:17:10 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:17:10 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:17:11 [INFO] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-26 20:17:11 [WARN] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26 20:17:11 [INFO] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-26 20:17:11 [WARN] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-26 20:17:12 [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-26 20:17:12 [INFO] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-26 20:17:12 [INFO] com.awbd.demo.AwbdApplication - Started AwbdApplication in 8.958 seconds (process running for 9.506)
+2026-04-26 20:18:19 [INFO] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26 20:18:19 [INFO] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-26 20:18:19 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:18:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-26 20:18:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-26 20:28:02 [INFO] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-04-26 20:28:02 [INFO] com.awbd.demo.AwbdApplicationTests - Starting AwbdApplicationTests using Java 17.0.17 with PID 23460 (started by Dell in C:\Users\Dell\Desktop\awbd\monolith)
+2026-04-26 20:28:02 [DEBUG] com.awbd.demo.AwbdApplicationTests - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-26 20:28:02 [INFO] com.awbd.demo.AwbdApplicationTests - The following 1 profile is active: "dev"
+2026-04-26 20:28:06 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26 20:28:07 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 368 ms. Found 10 JPA repository interfaces.
+2026-04-26 20:28:11 [INFO] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26 20:28:11 [INFO] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-04-26 20:28:15 [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26 20:28:15 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-26 20:28:16 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f8c7cd7
+2026-04-26 20:28:16 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-26 20:28:16 [WARN] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26 20:28:17 [INFO] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/farmacie_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.9
+	Default catalog/schema: farmacie_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26 20:28:23 [INFO] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26 20:28:23 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:28:24 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:28:24 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:28:25 [INFO] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-26 20:28:27 [WARN] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26 20:28:28 [INFO] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-26 20:28:28 [WARN] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-26 20:28:32 [INFO] com.awbd.demo.AwbdApplicationTests - Started AwbdApplicationTests in 33.075 seconds (process running for 41.402)
+2026-04-26 20:28:33 [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.awbd.demo.integration.ClientCardFidelitateIntegrationTest]: ClientCardFidelitateIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-26 20:28:33 [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.awbd.demo.AwbdApplication for test class com.awbd.demo.integration.ClientCardFidelitateIntegrationTest
+2026-04-26 20:28:34 [INFO] c.a.d.i.ClientCardFidelitateIntegrationTest - Starting ClientCardFidelitateIntegrationTest using Java 17.0.17 with PID 23460 (started by Dell in C:\Users\Dell\Desktop\awbd\monolith)
+2026-04-26 20:28:34 [DEBUG] c.a.d.i.ClientCardFidelitateIntegrationTest - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-26 20:28:34 [INFO] c.a.d.i.ClientCardFidelitateIntegrationTest - The following 1 profile is active: "test"
+2026-04-26 20:28:34 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26 20:28:35 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99 ms. Found 10 JPA repository interfaces.
+2026-04-26 20:28:35 [INFO] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26 20:28:35 [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26 20:28:35 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-04-26 20:28:37 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-26 20:28:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-04-26 20:28:37 [INFO] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:testdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26 20:28:38 [INFO] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26 20:28:38 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:28:38 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:28:38 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:28:39 [WARN] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26 20:28:39 [INFO] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-26 20:28:39 [WARN] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-26 20:28:40 [INFO] o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-04-26 20:28:40 [INFO] c.a.d.i.ClientCardFidelitateIntegrationTest - Started ClientCardFidelitateIntegrationTest in 6.782 seconds (process running for 49.75)
+2026-04-26 20:28:40 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ClientService.create cu argumente: [com.awbd.demo.entity.Client@2748ca6f]
+2026-04-26 20:28:40 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:28:40 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Popescu, prenume=Ana, cnp=1234567890123
+2026-04-26 20:28:43 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=1
+2026-04-26 20:28:43 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ClientService.create cu rezultat: com.awbd.demo.entity.Client@2748ca6f
+2026-04-26 20:28:43 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.CardFidelitateService.create cu argumente: [com.awbd.demo.dto.CardFidelitateRequest@2ba0131c]
+2026-04-26 20:28:43 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:28:43 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=gold, puncte=200, clientId=1
+2026-04-26 20:28:43 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate a fost creat cu succes, id=1
+2026-04-26 20:28:43 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.CardFidelitateService.create cu rezultat: com.awbd.demo.entity.CardFidelitate@1dd184c7
+2026-04-26 20:28:43 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.CardFidelitateService.getById cu argumente: [1]
+2026-04-26 20:28:43 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:28:43 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.CardFidelitateService.getById cu rezultat: com.awbd.demo.entity.CardFidelitate@1dd184c7
+2026-04-26 20:28:43 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.CardFidelitateService.getAll cu argumente: [Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-26 20:28:43 [INFO] c.a.d.service.CardFidelitateService - Se solicita lista paginata a cardurilor de fidelitate
+2026-04-26 20:28:43 [DEBUG] c.a.d.service.CardFidelitateService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:43 [DEBUG] c.a.d.service.CardFidelitateService - Au fost gasite 1 carduri pe pagina curenta din total 1
+2026-04-26 20:28:43 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.CardFidelitateService.getAll cu rezultat: Page 1 of 1 containing com.awbd.demo.entity.CardFidelitate instances
+2026-04-26 20:28:44 [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.awbd.demo.integration.ClientProfilClientIntegrationTest]: ClientProfilClientIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-26 20:28:44 [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.awbd.demo.AwbdApplication for test class com.awbd.demo.integration.ClientProfilClientIntegrationTest
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ClientService.create cu argumente: [com.awbd.demo.entity.Client@da5ceeb]
+2026-04-26 20:28:44 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:28:44 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Ionescu, prenume=Maria, cnp=9876543210123
+2026-04-26 20:28:44 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=2
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ClientService.create cu rezultat: com.awbd.demo.entity.Client@da5ceeb
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ProfilClientService.create cu argumente: [com.awbd.demo.dto.ProfilClientRequest@63941b57]
+2026-04-26 20:28:44 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:28:44 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=Antigripal, alergie=Polen, clientId=2
+2026-04-26 20:28:44 [INFO] c.a.demo.service.ProfilClientService - Profilul clientului a fost creat cu succes, id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ProfilClientService.create cu rezultat: com.awbd.demo.entity.ProfilClient@1f13276a
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ProfilClientService.getById cu argumente: [1]
+2026-04-26 20:28:44 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ProfilClientService.getById cu rezultat: com.awbd.demo.entity.ProfilClient@1f13276a
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ProfilClientService.getAll cu argumente: [Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-26 20:28:44 [INFO] c.a.demo.service.ProfilClientService - Se solicita lista paginata a profilurilor de clienti
+2026-04-26 20:28:44 [DEBUG] c.a.demo.service.ProfilClientService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:44 [DEBUG] c.a.demo.service.ProfilClientService - Au fost gasite 1 profiluri pe pagina curenta din total 1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ProfilClientService.getAll cu rezultat: Page 1 of 1 containing com.awbd.demo.entity.ProfilClient instances
+2026-04-26 20:28:44 [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.awbd.demo.integration.MedicamentIntegrationTest]: MedicamentIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-26 20:28:44 [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.awbd.demo.AwbdApplication for test class com.awbd.demo.integration.MedicamentIntegrationTest
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.CategorieMedicamentService.create cu argumente: [com.awbd.demo.entity.CategorieMedicament@23e426fd]
+2026-04-26 20:28:44 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca crearea unei categorii de medicament
+2026-04-26 20:28:44 [DEBUG] c.a.d.s.CategorieMedicamentService - Date primite pentru creare categorie: stoc=100, temperatura=20
+2026-04-26 20:28:44 [INFO] c.a.d.s.CategorieMedicamentService - Categoria a fost creata cu succes, id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.CategorieMedicamentService.create cu rezultat: com.awbd.demo.entity.CategorieMedicament@23e426fd
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ProspectService.create cu argumente: [com.awbd.demo.entity.Prospect@7545967f]
+2026-04-26 20:28:44 [INFO] c.awbd.demo.service.ProspectService - Se incearca crearea unui prospect nou
+2026-04-26 20:28:44 [DEBUG] c.awbd.demo.service.ProspectService - Date primite pentru creare prospect: afectiuni=Durere, febra, administrare=2 comprimate pe zi
+2026-04-26 20:28:44 [INFO] c.awbd.demo.service.ProspectService - Prospect creat cu succes, id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ProspectService.create cu rezultat: com.awbd.demo.entity.Prospect@7545967f
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.FurnizorService.create cu argumente: [com.awbd.demo.entity.Furnizor@6b22cb85]
+2026-04-26 20:28:44 [INFO] c.awbd.demo.service.FurnizorService - Se incearca crearea unui furnizor nou
+2026-04-26 20:28:44 [DEBUG] c.awbd.demo.service.FurnizorService - Date primite pentru creare furnizor: nume=FarmSupplier, adresa=Str. Lalelelor 10, oras=Bucuresti, tara=Romania, telefon=0711111111
+2026-04-26 20:28:44 [INFO] c.awbd.demo.service.FurnizorService - Furnizor creat cu succes, id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.FurnizorService.create cu rezultat: com.awbd.demo.entity.Furnizor@6b22cb85
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.MedicamentService.create cu argumente: [com.awbd.demo.dto.MedicamentRequest@c751f0f]
+2026-04-26 20:28:44 [INFO] c.a.demo.service.MedicamentService - Se incearca crearea unui medicament nou
+2026-04-26 20:28:44 [DEBUG] c.a.demo.service.MedicamentService - Date primite pentru creare medicament: denumire=Paracetamol, dataExpirare=2027-01-01, pret=15.50, furnizorId=1, prospectId=1, categorieId=1
+2026-04-26 20:28:44 [INFO] c.a.demo.service.MedicamentService - Medicament creat cu succes, id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.MedicamentService.create cu rezultat: com.awbd.demo.entity.Medicament@7d8af967
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.MedicamentService.getById cu argumente: [1]
+2026-04-26 20:28:44 [INFO] c.a.demo.service.MedicamentService - Se cauta medicamentul cu id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.MedicamentService.getById cu rezultat: com.awbd.demo.entity.Medicament@7d8af967
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.MedicamentService.getAll cu argumente: [Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-26 20:28:44 [INFO] c.a.demo.service.MedicamentService - Se solicita lista paginata a medicamentelor
+2026-04-26 20:28:44 [DEBUG] c.a.demo.service.MedicamentService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:44 [DEBUG] c.a.demo.service.MedicamentService - Au fost gasite 1 medicamente pe pagina curenta din total 1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.MedicamentService.getAll cu rezultat: Page 1 of 1 containing com.awbd.demo.entity.Medicament instances
+2026-04-26 20:28:44 [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.awbd.demo.integration.RetetaIntegrationTest]: RetetaIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-26 20:28:44 [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.awbd.demo.AwbdApplication for test class com.awbd.demo.integration.RetetaIntegrationTest
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.ClientService.create cu argumente: [com.awbd.demo.entity.Client@45791d5d]
+2026-04-26 20:28:44 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:28:44 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Georgescu, prenume=Dan, cnp=5555555555555
+2026-04-26 20:28:44 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=3
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.ClientService.create cu rezultat: com.awbd.demo.entity.Client@45791d5d
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.FarmacistService.create cu argumente: [com.awbd.demo.entity.Farmacist@312ef7be]
+2026-04-26 20:28:44 [INFO] c.awbd.demo.service.FarmacistService - Se incearca crearea unui farmacist nou
+2026-04-26 20:28:44 [DEBUG] c.awbd.demo.service.FarmacistService - Date primite pentru creare farmacist: nume=Pop, prenume=Elena, email=elena.pop@test.com
+2026-04-26 20:28:44 [INFO] c.awbd.demo.service.FarmacistService - Farmacist creat cu succes, id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.FarmacistService.create cu rezultat: com.awbd.demo.entity.Farmacist@312ef7be
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.RetetaService.create cu argumente: [com.awbd.demo.dto.RetetaRequest@42a3ad0]
+2026-04-26 20:28:44 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:28:44 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-03-08, clientId=3, farmacistId=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.service.RetetaService - Reteta a fost creata cu succes, id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.RetetaService.create cu rezultat: com.awbd.demo.entity.Reteta@27d96af4
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.RetetaService.getById cu argumente: [1]
+2026-04-26 20:28:44 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.RetetaService.getById cu rezultat: com.awbd.demo.entity.Reteta@27d96af4
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Intrare in metoda: com.awbd.demo.service.RetetaService.getAll cu argumente: [Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-26 20:28:44 [INFO] com.awbd.demo.service.RetetaService - Se solicita lista paginata a retetelor
+2026-04-26 20:28:44 [DEBUG] com.awbd.demo.service.RetetaService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:44 [DEBUG] com.awbd.demo.service.RetetaService - Au fost gasite 1 retete pe pagina curenta din total 1
+2026-04-26 20:28:44 [INFO] com.awbd.demo.aspect.LoggingAspect - Iesire din metoda: com.awbd.demo.service.RetetaService.getAll cu rezultat: Page 1 of 1 containing com.awbd.demo.entity.Reteta instances
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:28:47 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=silver, puncte=50, clientId=99
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Crearea cardului a esuat: clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:28:47 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=mediu, puncte=100, clientId=1
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate a fost creat cu succes, id=null
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:28:47 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=silver, puncte=50, clientId=1
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Crearea cardului a esuat: clientul cu id=1 are deja card de fidelitate
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se incearca stergerea cardului de fidelitate cu id=1
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=1 a fost sters cu succes
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se solicita lista paginata a cardurilor de fidelitate
+2026-04-26 20:28:47 [DEBUG] c.a.d.service.CardFidelitateService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:47 [DEBUG] c.a.d.service.CardFidelitateService - Au fost gasite 2 carduri pe pagina curenta din total 2
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se incearca actualizarea cardului de fidelitate cu id=1
+2026-04-26 20:28:47 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru update card: nivel=null, puncte=null, clientId=2
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Actualizarea cardului a esuat: clientul cu id=2 nu a fost gasit
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=99
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=99 nu a fost gasit
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se incearca stergerea cardului de fidelitate cu id=99
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=99
+2026-04-26 20:28:47 [ERROR] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=99 nu a fost gasit
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Se incearca crearea unui card de fidelitate nou
+2026-04-26 20:28:47 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru creare card: nivel=gold, puncte=250, clientId=1
+2026-04-26 20:28:47 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate a fost creat cu succes, id=null
+2026-04-26 20:28:48 [INFO] c.a.d.service.CardFidelitateService - Se incearca actualizarea cardului de fidelitate cu id=1
+2026-04-26 20:28:48 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru update card: nivel=null, puncte=null, clientId=2
+2026-04-26 20:28:48 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:28:48 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=null a fost actualizat cu succes
+2026-04-26 20:28:48 [INFO] c.a.d.service.CardFidelitateService - Se incearca actualizarea cardului de fidelitate cu id=1
+2026-04-26 20:28:48 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru update card: nivel=gold, puncte=300, clientId=null
+2026-04-26 20:28:48 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:28:48 [INFO] c.a.d.service.CardFidelitateService - Cardul de fidelitate cu id=null a fost actualizat cu succes
+2026-04-26 20:28:48 [INFO] c.a.d.service.CardFidelitateService - Se incearca actualizarea cardului de fidelitate cu id=1
+2026-04-26 20:28:48 [DEBUG] c.a.d.service.CardFidelitateService - Date primite pentru update card: nivel=null, puncte=null, clientId=2
+2026-04-26 20:28:48 [INFO] c.a.d.service.CardFidelitateService - Se cauta cardul de fidelitate cu id=1
+2026-04-26 20:28:48 [ERROR] c.a.d.service.CardFidelitateService - Actualizarea cardului a esuat: clientul cu id=2 are deja card de fidelitate
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca actualizarea categoriei cu id=99
+2026-04-26 20:28:48 [DEBUG] c.a.d.s.CategorieMedicamentService - Date primite pentru update: stoc=500, temperatura=10
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=99
+2026-04-26 20:28:48 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca crearea unei categorii de medicament
+2026-04-26 20:28:48 [DEBUG] c.a.d.s.CategorieMedicamentService - Date primite pentru creare categorie: stoc=100, temperatura=20
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Categoria a fost creata cu succes, id=null
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca stergerea categoriei cu id=99
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=99
+2026-04-26 20:28:48 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se solicita lista paginata a categoriilor de medicamente
+2026-04-26 20:28:48 [DEBUG] c.a.d.s.CategorieMedicamentService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:48 [DEBUG] c.a.d.s.CategorieMedicamentService - Au fost gasite 2 categorii pe pagina curenta din total 2
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca actualizarea categoriei cu id=1
+2026-04-26 20:28:48 [DEBUG] c.a.d.s.CategorieMedicamentService - Date primite pentru update: stoc=300, temperatura=5
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=1
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Categoria cu id=null a fost actualizata cu succes
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=1
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se incearca stergerea categoriei cu id=1
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=1
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Categoria cu id=1 a fost stearsa cu succes
+2026-04-26 20:28:48 [INFO] c.a.d.s.CategorieMedicamentService - Se cauta categoria cu id=99
+2026-04-26 20:28:48 [ERROR] c.a.d.s.CategorieMedicamentService - Categoria cu id=99 nu a fost gasita
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se solicita lista paginata a clientilor
+2026-04-26 20:28:48 [DEBUG] com.awbd.demo.service.ClientService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:48 [DEBUG] com.awbd.demo.service.ClientService - Au fost gasiti 2 clienti pe pagina curenta din total 2
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se incearca stergerea clientului cu id=1
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=1 a fost sters cu succes
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:28:48 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=null, prenume=null, cnp=9999999999999, varsta=null, telefon=null
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=null a fost actualizat cu succes
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=99
+2026-04-26 20:28:48 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=Test, prenume=null, cnp=null, varsta=null, telefon=null
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=99
+2026-04-26 20:28:48 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:28:48 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=null, prenume=null, cnp=9999999999999, varsta=null, telefon=null
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:28:48 [ERROR] com.awbd.demo.service.ClientService - Actualizarea clientului a esuat: CNP duplicat 9999999999999
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:28:48 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=Ionescu, prenume=null, cnp=   , varsta=null, telefon=null
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=null a fost actualizat cu succes
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:28:48 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Popescu, prenume=Ana, cnp=1234567890123
+2026-04-26 20:28:48 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=null
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:28:49 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=Ionescu, prenume=Maria, cnp=null, varsta=30, telefon=0722222222
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=null a fost actualizat cu succes
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:28:49 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=null, prenume=null, cnp=1234567890123
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: exista deja client cu CNP 1234567890123
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:28:49 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=null, prenume=null, cnp=null
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: CNP lipsa
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:28:49 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=null, prenume=null, cnp=   
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Crearea clientului a esuat: CNP lipsa
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se incearca actualizarea clientului cu id=1
+2026-04-26 20:28:49 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru update: nume=null, prenume=null, cnp=1234567890123, varsta=null, telefon=null
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=1
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Clientul cu id=null a fost actualizat cu succes
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=99
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se incearca crearea unui client nou
+2026-04-26 20:28:49 [DEBUG] com.awbd.demo.service.ClientService - Date primite pentru creare client: nume=Popescu, prenume=Ana, cnp=1234567890123
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Client creat cu succes, id=null
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se incearca stergerea clientului cu id=99
+2026-04-26 20:28:49 [INFO] com.awbd.demo.service.ClientService - Se cauta clientul cu id=99
+2026-04-26 20:28:49 [ERROR] com.awbd.demo.service.ClientService - Clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:50 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:28:50 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=25.50, cantitate=2
+2026-04-26 20:28:50 [INFO] c.a.d.service.DetaliiRetetaService - Detaliul de reteta a fost creat cu succes pentru retetaId=1 si medicamentId=2
+2026-04-26 20:28:50 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:28:50 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=null, cantitate=null
+2026-04-26 20:28:50 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: medicamentul cu id=2 nu a fost gasit
+2026-04-26 20:28:50 [INFO] c.a.d.service.DetaliiRetetaService - Se cauta detaliul pentru retetaId=1 si medicamentId=2
+2026-04-26 20:28:50 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:28:50 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=null, cantitate=null
+2026-04-26 20:28:50 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: exista deja medicamentul cu id=2 in reteta cu id=1
+2026-04-26 20:28:50 [INFO] c.a.d.service.DetaliiRetetaService - Se cauta detaliul pentru retetaId=1 si medicamentId=2
+2026-04-26 20:28:50 [ERROR] c.a.d.service.DetaliiRetetaService - Detaliile pentru retetaId=1 si medicamentId=2 nu au fost gasite
+2026-04-26 20:28:50 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:28:50 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=null, cantitate=null
+2026-04-26 20:28:50 [ERROR] c.a.d.service.DetaliiRetetaService - Crearea detaliului de reteta a esuat: reteta cu id=1 nu a fost gasita
+2026-04-26 20:28:50 [INFO] c.a.d.service.DetaliiRetetaService - Se incearca crearea unui detaliu de reteta nou
+2026-04-26 20:28:50 [DEBUG] c.a.d.service.DetaliiRetetaService - Date primite pentru creare detaliu reteta: retetaId=1, medicamentId=2, pret=30.00, cantitate=3
+2026-04-26 20:28:50 [INFO] c.a.d.service.DetaliiRetetaService - Detaliul de reteta a fost creat cu succes pentru retetaId=1 si medicamentId=2
+2026-04-26 20:28:50 [INFO] c.awbd.demo.service.FarmacistService - Se incearca crearea unui farmacist nou
+2026-04-26 20:28:50 [DEBUG] c.awbd.demo.service.FarmacistService - Date primite pentru creare farmacist: nume=Ionescu, prenume=Maria, email=maria.ionescu@example.com
+2026-04-26 20:28:50 [INFO] c.awbd.demo.service.FarmacistService - Farmacist creat cu succes, id=null
+2026-04-26 20:28:50 [INFO] c.awbd.demo.service.FarmacistService - Se cauta farmacistul cu id=1
+2026-04-26 20:28:50 [INFO] c.awbd.demo.service.FarmacistService - Se incearca crearea unui farmacist nou
+2026-04-26 20:28:50 [DEBUG] c.awbd.demo.service.FarmacistService - Date primite pentru creare farmacist: nume=Ionescu, prenume=Maria, email=maria.ionescu@example.com
+2026-04-26 20:28:50 [INFO] c.awbd.demo.service.FarmacistService - Farmacist creat cu succes, id=null
+2026-04-26 20:28:50 [INFO] c.awbd.demo.service.FarmacistService - Se cauta farmacistul cu id=99
+2026-04-26 20:28:50 [ERROR] c.awbd.demo.service.FarmacistService - Farmacistul cu id=99 nu a fost gasit
+2026-04-26 20:28:50 [INFO] c.awbd.demo.service.FarmacistService - Se incearca crearea unui farmacist nou
+2026-04-26 20:28:50 [DEBUG] c.awbd.demo.service.FarmacistService - Date primite pentru creare farmacist: nume=null, prenume=null, email=maria.ionescu@example.com
+2026-04-26 20:28:50 [ERROR] c.awbd.demo.service.FarmacistService - Crearea farmacistului a esuat: exista deja farmacist cu email maria.ionescu@example.com
+2026-04-26 20:28:51 [INFO] c.awbd.demo.service.FurnizorService - Se incearca crearea unui furnizor nou
+2026-04-26 20:28:51 [DEBUG] c.awbd.demo.service.FurnizorService - Date primite pentru creare furnizor: nume=FarmSupplier, adresa=Str. Lalelelor, oras=Bucuresti, tara=Romania, telefon=0711111111
+2026-04-26 20:28:51 [INFO] c.awbd.demo.service.FurnizorService - Furnizor creat cu succes, id=null
+2026-04-26 20:28:51 [INFO] c.awbd.demo.service.FurnizorService - Se cauta furnizorul cu id=1
+2026-04-26 20:28:51 [INFO] c.awbd.demo.service.FurnizorService - Se cauta furnizorul cu id=99
+2026-04-26 20:28:51 [ERROR] c.awbd.demo.service.FurnizorService - Furnizorul cu id=99 nu a fost gasit
+2026-04-26 20:28:51 [INFO] c.awbd.demo.service.FurnizorService - Se incearca crearea unui furnizor nou
+2026-04-26 20:28:51 [DEBUG] c.awbd.demo.service.FurnizorService - Date primite pentru creare furnizor: nume=FarmSupplier, adresa=Str. Lalelelor, oras=Bucuresti, tara=Romania, telefon=0711111111
+2026-04-26 20:28:51 [INFO] c.awbd.demo.service.FurnizorService - Furnizor creat cu succes, id=null
+2026-04-26 20:28:51 [INFO] c.a.demo.service.MedicamentService - Se cauta medicamentul cu id=1
+2026-04-26 20:28:51 [INFO] c.a.demo.service.MedicamentService - Se incearca crearea unui medicament nou
+2026-04-26 20:28:51 [DEBUG] c.a.demo.service.MedicamentService - Date primite pentru creare medicament: denumire=Paracetamol, dataExpirare=2027-05-10, pret=15.50, furnizorId=1, prospectId=2, categorieId=3
+2026-04-26 20:28:51 [INFO] c.a.demo.service.MedicamentService - Medicament creat cu succes, id=null
+2026-04-26 20:28:51 [INFO] c.a.demo.service.MedicamentService - Se incearca crearea unui medicament nou
+2026-04-26 20:28:51 [DEBUG] c.a.demo.service.MedicamentService - Date primite pentru creare medicament: denumire=null, dataExpirare=null, pret=null, furnizorId=1, prospectId=2, categorieId=3
+2026-04-26 20:28:51 [ERROR] c.a.demo.service.MedicamentService - Crearea medicamentului a esuat: furnizorul cu id=1 nu a fost gasit
+2026-04-26 20:28:51 [INFO] c.a.demo.service.MedicamentService - Se cauta medicamentul cu id=99
+2026-04-26 20:28:51 [ERROR] c.a.demo.service.MedicamentService - Medicamentul cu id=99 nu a fost gasit
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:28:52 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=null, alergie=null, clientId=99
+2026-04-26 20:28:52 [ERROR] c.a.demo.service.ProfilClientService - Crearea profilului a esuat: clientul cu id=99 nu a fost gasit
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se solicita lista paginata a profilurilor de clienti
+2026-04-26 20:28:52 [DEBUG] c.a.demo.service.ProfilClientService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:52 [DEBUG] c.a.demo.service.ProfilClientService - Au fost gasite 2 profiluri pe pagina curenta din total 2
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se incearca actualizarea profilului cu id=1
+2026-04-26 20:28:52 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru update profil: vaccinari=null, alergie=null, clientId=2
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Profilul cu id=null a fost actualizat cu succes
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:28:52 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=null, alergie=null, clientId=1
+2026-04-26 20:28:52 [ERROR] c.a.demo.service.ProfilClientService - Crearea profilului a esuat: clientul cu id=1 are deja profil
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se incearca actualizarea profilului cu id=1
+2026-04-26 20:28:52 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru update profil: vaccinari=COVID, alergie=Polen, clientId=null
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Profilul cu id=null a fost actualizat cu succes
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se incearca stergerea profilului cu id=99
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=99
+2026-04-26 20:28:52 [ERROR] c.a.demo.service.ProfilClientService - Profilul cu id=99 nu a fost gasit
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:28:52 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=Antigripal, alergie=Penicilina, clientId=1
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Profilul clientului a fost creat cu succes, id=null
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se incearca stergerea profilului cu id=1
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:28:52 [INFO] c.a.demo.service.ProfilClientService - Profilul cu id=1 a fost sters cu succes
+2026-04-26 20:28:53 [INFO] c.a.demo.service.ProfilClientService - Se incearca actualizarea profilului cu id=1
+2026-04-26 20:28:53 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru update profil: vaccinari=null, alergie=null, clientId=2
+2026-04-26 20:28:53 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:28:53 [ERROR] c.a.demo.service.ProfilClientService - Actualizarea profilului a esuat: clientul cu id=2 nu a fost gasit
+2026-04-26 20:28:53 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=99
+2026-04-26 20:28:53 [ERROR] c.a.demo.service.ProfilClientService - Profilul cu id=99 nu a fost gasit
+2026-04-26 20:28:53 [INFO] c.a.demo.service.ProfilClientService - Se incearca crearea unui profil de client nou
+2026-04-26 20:28:53 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru creare profil: vaccinari=Hepatita B, alergie=Polen, clientId=1
+2026-04-26 20:28:53 [INFO] c.a.demo.service.ProfilClientService - Profilul clientului a fost creat cu succes, id=null
+2026-04-26 20:28:53 [INFO] c.a.demo.service.ProfilClientService - Se incearca actualizarea profilului cu id=1
+2026-04-26 20:28:53 [DEBUG] c.a.demo.service.ProfilClientService - Date primite pentru update profil: vaccinari=null, alergie=null, clientId=2
+2026-04-26 20:28:53 [INFO] c.a.demo.service.ProfilClientService - Se cauta profilul cu id=1
+2026-04-26 20:28:53 [ERROR] c.a.demo.service.ProfilClientService - Actualizarea profilului a esuat: clientul cu id=2 are deja profil
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se incearca actualizarea prospectului cu id=99
+2026-04-26 20:28:53 [DEBUG] c.awbd.demo.service.ProspectService - Date primite pentru update: afectiuni=Nou, administrare=null
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=99
+2026-04-26 20:28:53 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=1
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se incearca stergerea prospectului cu id=99
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=99
+2026-04-26 20:28:53 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se incearca actualizarea prospectului cu id=1
+2026-04-26 20:28:53 [DEBUG] c.awbd.demo.service.ProspectService - Date primite pentru update: afectiuni=Durere, febra, administrare=2 pe zi
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=1
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Prospectul cu id=null a fost actualizat cu succes
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se incearca crearea unui prospect nou
+2026-04-26 20:28:53 [DEBUG] c.awbd.demo.service.ProspectService - Date primite pentru creare prospect: afectiuni=Durere, febra, administrare=2 comprimate pe zi
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Prospect creat cu succes, id=null
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se incearca stergerea prospectului cu id=1
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=1
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Prospectul cu id=1 a fost sters cu succes
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se cauta prospectul cu id=99
+2026-04-26 20:28:53 [ERROR] c.awbd.demo.service.ProspectService - Prospectul cu id=99 nu a fost gasit
+2026-04-26 20:28:53 [INFO] c.awbd.demo.service.ProspectService - Se solicita lista paginata a prospectelor
+2026-04-26 20:28:53 [DEBUG] c.awbd.demo.service.ProspectService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:53 [DEBUG] c.awbd.demo.service.ProspectService - Au fost gasite 2 prospecte pe pagina curenta din total 2
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca actualizarea retetei cu id=1
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru update reteta: dataTiparire=2026-05-10, clientId=10, farmacistId=20
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Reteta cu id=null a fost actualizata cu succes
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca actualizarea retetei cu id=1
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru update reteta: dataTiparire=null, clientId=10, farmacistId=20
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Actualizarea retetei a esuat: farmacistul cu id=20 nu a fost gasit
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-03-08, clientId=1, farmacistId=2
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Reteta a fost creata cu succes, id=null
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca stergerea retetei cu id=1
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Reteta cu id=1 a fost stearsa cu succes
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca stergerea retetei cu id=99
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=99
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-03-08, clientId=1, farmacistId=2
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Crearea retetei a esuat: clientul cu id=1 nu a fost gasit
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=99
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca actualizarea retetei cu id=1
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru update reteta: dataTiparire=null, clientId=10, farmacistId=null
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=1
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Actualizarea retetei a esuat: clientul cu id=10 nu a fost gasit
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-04-01, clientId=1, farmacistId=2
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Reteta a fost creata cu succes, id=null
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca actualizarea retetei cu id=99
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru update reteta: dataTiparire=2026-05-10, clientId=null, farmacistId=null
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se cauta reteta cu id=99
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Reteta cu id=99 nu a fost gasita
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se solicita lista paginata a retetelor
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Page request: page=0, size=10, sort=UNSORTED
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Au fost gasite 2 retete pe pagina curenta din total 2
+2026-04-26 20:28:53 [INFO] com.awbd.demo.service.RetetaService - Se incearca crearea unei retete noi
+2026-04-26 20:28:53 [DEBUG] com.awbd.demo.service.RetetaService - Date primite pentru creare reteta: dataTiparire=2026-03-08, clientId=1, farmacistId=2
+2026-04-26 20:28:53 [ERROR] com.awbd.demo.service.RetetaService - Crearea retetei a esuat: farmacistul cu id=2 nu a fost gasit
+2026-04-26 20:28:53 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:28:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-26 20:28:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-26 20:28:55 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:28:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-04-26 20:28:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-04-26 20:29:22 [INFO] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-04-26 20:29:22 [INFO] com.awbd.demo.AwbdApplication - Starting AwbdApplication using Java 17.0.17 with PID 4704 (C:\Users\Dell\Desktop\awbd\monolith\target\classes started by Dell in C:\Users\Dell\Desktop\awbd\monolith)
+2026-04-26 20:29:22 [DEBUG] com.awbd.demo.AwbdApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-26 20:29:22 [INFO] com.awbd.demo.AwbdApplication - The following 1 profile is active: "dev"
+2026-04-26 20:29:23 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26 20:29:23 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 10 JPA repository interfaces.
+2026-04-26 20:29:25 [INFO] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-26 20:29:25 [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-26 20:29:25 [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-26 20:29:25 [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-26 20:29:25 [INFO] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2385 ms
+2026-04-26 20:29:25 [INFO] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26 20:29:25 [INFO] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-04-26 20:29:26 [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26 20:29:26 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-26 20:29:26 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c930fc3
+2026-04-26 20:29:26 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-26 20:29:26 [WARN] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26 20:29:26 [INFO] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/farmacie_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.9
+	Default catalog/schema: farmacie_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26 20:29:28 [INFO] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26 20:29:28 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26 20:29:28 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:29:28 [INFO] o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-04-26 20:29:28 [INFO] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-26 20:29:29 [WARN] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26 20:29:29 [INFO] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-26 20:29:29 [WARN] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-26 20:29:30 [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-26 20:29:30 [INFO] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-26 20:29:30 [INFO] com.awbd.demo.AwbdApplication - Started AwbdApplication in 8.679 seconds (process running for 9.275)
